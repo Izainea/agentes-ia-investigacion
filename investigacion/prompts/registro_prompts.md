@@ -139,3 +139,33 @@ Detalle completo en `bibliografia/descargas.md` y `bibliografia/referencias.md`.
 
 **Arnés aplicado:** el agente reporta discrepancias, el investigador decide; todo queda
 documentado. El error fue del propio agente — y el arnés lo detectó. Ese es el punto.
+
+---
+
+## P9 — Revalidación del resultado tras la regla 3c (2026-07-30) ✔ EJECUTADO
+
+**Propósito:** al incorporarse el criterio de usabilidad de fuentes (regla 3c del arnés),
+comprobar si el resultado de la investigación cambia: ¿alguna afirmación del artículo
+descansa en una fuente que ya no puede usarse?
+
+> Revisa cada afirmación empírica de articulo/articulo_prensa.md y traza de qué fuente
+> proviene. Verifica, afirmación por afirmación, que el dato citado está contenido en el
+> material que el proyecto realmente posee: el PDF descargado y/o el abstract real
+> registrado en la Matriz Q. Si alguna afirmación depende de una fuente SOLO-REFERENCIA
+> o de un dato que no aparece en su material, repórtala SIN corregirla: yo decido si se
+> retira o se reformula.
+
+**Resultado real:** el resultado **no cambia**. Las 7 fuentes cumplen el criterio
+(3 con PDF descargado, 5 con abstract real; ninguna quedó SOLO-REFERENCIA) y cada dato
+citado se localizó en el material poseído: Sparrow (menor recuerdo del contenido,
+mejor recuerdo de dónde hallarlo — abstract Crossref), Risko y Gilbert (costos de la
+descarga cognitiva — abstract PubMed), Gerlich (n=666, correlación negativa mediada por
+descarga cognitiva, mayor en jóvenes — abstract Semantic Scholar), Lee (n=319, 936
+tareas, confianza en la IA ↔ menor pensamiento crítico — abstract Semantic Scholar),
+Kosmyna (n=54, EEG, menor conectividad, "deuda cognitiva" — abstract arXiv y PDF),
+Ward (presencia del teléfono reduce capacidad disponible — PDF) y Dell'Acqua (n=758,
+frontera dentada, "dormidos al volante" — PDF). Ninguna afirmación tuvo que retirarse;
+la validación quedó declarada en el recuadro metodológico del artículo.
+
+**Arnés aplicado:** el criterio no solo filtra hacia adelante: obliga a revalidar hacia
+atrás lo ya escrito. El resultado se sostiene y ahora es demostrable.

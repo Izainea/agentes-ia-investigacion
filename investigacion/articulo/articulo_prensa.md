@@ -63,7 +63,11 @@ de investigación esperando a quien la tome.
 Pregunta y plan definidos por el investigador; búsqueda sistemática con ecuación booleana
 ejecutada en OpenAlex y registrada con conteos (PRISMA); selección y validación humana de
 7 fuentes en una Matriz Q con citas localizables; borrador redactado por el agente bajo el
-arnés del proyecto (`CLAUDE.md`) y reescrito por el autor. Todo el rastro —prompts, datos,
+arnés del proyecto (`CLAUDE.md`) y reescrito por el autor. Cada afirmación del texto se
+apoya únicamente en fuentes que cumplen el criterio de usabilidad del arnés (regla 3c):
+PDF descargado en el proyecto y/o abstract real registrado desde una fuente verificable,
+además de la referencia verificada. Validación posterior al criterio: 7 de 7 fuentes lo
+cumplen, por lo que ninguna afirmación tuvo que retirarse. Todo el rastro —prompts, datos,
 matriz, versiones— está en el repositorio del proyecto.
 
 ### Referencias
