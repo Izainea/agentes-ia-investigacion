@@ -260,10 +260,10 @@
     var funnel = $('#oa-funnel');
     var pct = full > 0 ? Math.max(2, Math.round(filt / full * 100)) : 0;
     funnel.innerHTML =
-      '<div style="font-size:.8rem;color:#5d6d80;min-width:15rem">' +
-      '<div style="background:#003366;color:#fff;border-radius:7px;padding:.24rem .65rem;margin:.18rem 0;font-weight:600">identificados: ' + fmt(full) + '</div>' +
-      '<div style="background:#a98a2f;color:#fff;border-radius:7px;padding:.24rem .65rem;margin:.18rem 0;font-weight:600;width:' + Math.max(pct, 28) + '%;min-width:13rem">tras filtro título/abstract: ' + fmt(filt) + '</div>' +
-      '<div style="border:1.5px dashed #a98a2f;color:#7a6222;border-radius:7px;padding:.24rem .65rem;margin:.18rem 0;font-weight:600;width:28%;min-width:13rem">selección humana: la hace el investigador</div>' +
+      '<div style="font-size:.8rem;color:#727C87;min-width:15rem">' +
+      '<div style="background:#2C4A63;color:#fff;border-radius:7px;padding:.24rem .65rem;margin:.18rem 0;font-weight:600">identificados: ' + fmt(full) + '</div>' +
+      '<div style="background:#A87F3A;color:#fff;border-radius:7px;padding:.24rem .65rem;margin:.18rem 0;font-weight:600;width:' + Math.max(pct, 28) + '%;min-width:13rem">tras filtro título/abstract: ' + fmt(filt) + '</div>' +
+      '<div style="border:1.5px dashed #A87F3A;color:#7a6222;border-radius:7px;padding:.24rem .65rem;margin:.18rem 0;font-weight:600;width:28%;min-width:13rem">selección humana: la hace el investigador</div>' +
       '</div>';
     var ol = $('#oa-results');
     ol.innerHTML = '';
@@ -398,12 +398,12 @@
       var x = Math.round((250 - w) / 2);
       var y = 6 + i * 52;
       svg += '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="34" rx="8" fill="' +
-             (i === 3 ? '#1f7a4d' : '#003366') + '"/>' +
+             (i === 3 ? '#1f7a4d' : '#2C4A63') + '"/>' +
              '<text x="125" y="' + (y + 21) + '" text-anchor="middle" fill="#fff" font-size="11.5" font-weight="700">' +
              labels[i] + ': ' + fmt(vals[i]) + '</text>';
       if (i < 3) {
         var exc = Math.max(0, vals[i] - vals[i + 1]);
-        svg += '<line x1="125" y1="' + (y + 34) + '" x2="125" y2="' + (y + 52) + '" stroke="#C6A44E" stroke-width="2.5"/>' +
+        svg += '<line x1="125" y1="' + (y + 34) + '" x2="125" y2="' + (y + 52) + '" stroke="#D9A854" stroke-width="2.5"/>' +
                '<text x="255" y="' + (y + 47) + '" font-size="10.5" fill="#7a6222">excluidos: ' + fmt(exc) + '</text>';
       }
     }
