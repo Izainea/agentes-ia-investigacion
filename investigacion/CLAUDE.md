@@ -23,6 +23,12 @@ multiplica también sus errores.
    fuentes van a `bibliografia/metadatos/`. Si un editor bloquea la descarga automatizada
    o la fuente es de pago, NO se evade el bloqueo: la URL queda en
    `bibliografia/descargas.md` para descarga manual del investigador.
+3c. **Criterio de usabilidad de fuentes.** Una fuente solo puede sustentar afirmaciones
+   en la síntesis y en el producto final si en el proyecto están: (a) su **PDF descargado**
+   y/o (b) su **abstract real registrado** (de una fuente verificable: editor, PubMed,
+   arXiv, Semantic Scholar, Crossref), además de (c) su **referencia completa verificada**.
+   En las búsquedas, prioriza resultados con abstract disponible y repórtalo por fuente.
+   Lo que no cumpla el mínimo se marca SOLO-REFERENCIA y no responde ninguna pregunta.
 4. **La Matriz Q es trazable.** Cada fila incluye cita textual y sección localizable del
    artículo. Yo valido cada fila antes de que se use en la síntesis.
 5. **Imágenes con integridad.** Diagramas conceptuales e ilustraciones: sí, declarados como

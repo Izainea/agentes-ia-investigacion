@@ -590,7 +590,8 @@ AND ("artificial intelligence" OR "generative AI" OR chatbot)</div>
     </div>
   </div>
   <p class="nota">El agente extrae y propone; <strong>el investigador valida cada fila</strong>.
-  Regla dura: si la fuente no responde una pregunta → <em>"no aborda"</em>, nunca relleno plausible.</p>
+  Reglas duras: solo responden las fuentes con <strong>PDF descargado y/o abstract real</strong>;
+  y si una fuente no responde una pregunta → <em>"no aborda"</em>, nunca relleno plausible.</p>
 </section>
 
 <!-- · BIBLIOGRAFÍA DESCARGADA -->
@@ -600,21 +601,22 @@ AND ("artificial intelligence" OR "generative AI" OR chatbot)</div>
   <div class="fila">
     <div class="caja" style="max-width:26vw;min-width:15rem;text-align:left">
       <p class="tag" style="color:var(--azul)">bibliografia/pdf/</p>
-      <p style="margin:.4vh 0;font-weight:700;font-size:clamp(.8rem,1.3vw,1.05rem)">PDFs de acceso abierto</p>
-      <p class="mini" style="color:var(--texto)">Descargados los que la licencia permite —
-      p. ej. el preprint del MIT (Kosmyna 2025, 37 MB) directo de arXiv.</p>
+      <p style="margin:.4vh 0;font-weight:700;font-size:clamp(.8rem,1.3vw,1.05rem)">PDFs descargados: 3 de 7</p>
+      <p class="mini" style="color:var(--texto)">Kosmyna (arXiv, 37 MB) · Ward (repositorio
+      Texas ScholarWorks) · Dell'Acqua (working paper público, espejo MIT Sloan).</p>
     </div>
     <div class="caja" style="max-width:26vw;min-width:15rem;text-align:left">
-      <p class="tag" style="color:var(--azul)">bibliografia/metadatos/</p>
-      <p style="margin:.4vh 0;font-weight:700;font-size:clamp(.8rem,1.3vw,1.05rem)">Una ficha por fuente (7/7)</p>
-      <p class="mini" style="color:var(--texto)">Título, autores, año, DOI, URL y estado de
-      acceso — obtenidos de OpenAlex, para todas las fuentes, con o sin PDF.</p>
+      <p class="tag" style="color:var(--azul)">Abstracts + metadatos</p>
+      <p style="margin:.4vh 0;font-weight:700;font-size:clamp(.8rem,1.3vw,1.05rem)">Abstracts reales: 5 de 7 · fichas: 7/7</p>
+      <p class="mini" style="color:var(--texto)">De arXiv, Semantic Scholar, PubMed y Crossref —
+      integrados en matriz_q.xlsx junto a la ficha OpenAlex de cada fuente.</p>
     </div>
     <div class="caja" style="max-width:26vw;min-width:15rem;text-align:left;background:linear-gradient(160deg,#fdf9ec,#f6ecd2);border:2px solid var(--dorado-2)">
-      <p class="tag" style="color:#6d5716">bibliografia/descargas.md</p>
-      <p style="margin:.4vh 0;font-weight:800;font-size:clamp(.8rem,1.3vw,1.05rem)">URL explícita de cada fuente</p>
-      <p class="mini" style="color:var(--texto)">Y los bloqueos anti-bot de los editores,
-      <strong>registrados — no evadidos</strong>: quedan a un clic de descarga manual.</p>
+      <p class="tag" style="color:#6d5716">El criterio de usabilidad</p>
+      <p style="margin:.4vh 0;font-weight:800;font-size:clamp(.8rem,1.3vw,1.05rem)">Cumplido 7/7</p>
+      <p class="mini" style="color:var(--texto)">Las preguntas solo se responden desde fuentes
+      con PDF y/o abstract real. Los bloqueos de editores: <strong>registrados, no evadidos</strong>
+      (descargas.md).</p>
     </div>
   </div>
   <p class="nota">Descargar solo lo que la licencia permite también es parte del método.</p>
@@ -823,27 +825,35 @@ pregunta auxiliar; si alguno no responde a ninguna, dilo.</div>
 
 <div class="pmodal-back hidden" id="pm-e4"><div class="pmodal"><button class="pmodal-close">✕</button>
   <h3>Etapa 4 · Literatura — dos prompts</h3>
-  <p class="pnota" style="margin-top:0"><strong>1 · Buscar (ecuación + conteos PRISMA):</strong></p>
+  <p class="pnota" style="margin-top:0"><strong>1 · Buscar — priorizando fuentes con abstract disponible:</strong></p>
   <div class="codebox" id="pc-e4a">A partir de mis preguntas Q1–Q3 (léelas en plan.md), extrae los
 conceptos clave con PICO, expande sinónimos en inglés y arma la
 ecuación booleana. Ejecútala contra la API de OpenAlex, guarda el
 JSON en datos/ con la fecha y registra: ecuación exacta, total
 identificado, filtros y total tras filtros. NO selecciones todavía:
-lista los 15 más citados con título, año, DOI, citas y la URL de
-acceso explícita de cada uno.</div>
+lista los 15 más citados con título, año, DOI, citas, la URL de
+acceso explícita de cada uno y si su ABSTRACT está disponible en
+una fuente verificable (editor, PubMed, arXiv, Semantic Scholar,
+Crossref). Prioriza las fuentes con abstract disponible.</div>
   <button class="pcopy" data-copia="pc-e4a">⧉ Copiar prompt</button>
-  <p class="pnota"><strong>2 · Descargar la bibliografía elegida (PDFs + metadatos):</strong></p>
-  <div class="codebox" id="pc-e4b">De los artículos que seleccioné, descarga a bibliografia/pdf/ los
-PDF de acceso abierto cuya licencia lo permita, y guarda en
-bibliografia/metadatos/ la ficha de TODOS (título, autores, año,
-DOI, URL, estado de acceso). Si un editor bloquea la descarga
-automatizada o el artículo es de pago, NO evadas el bloqueo:
-registra la URL en bibliografia/descargas.md para mi descarga
-manual. Luego llena bibliografia/matriz_q.csv: qué responde cada
-fuente a Q1–Q3 (con cita textual) y qué vacío deja; si no aborda
-una pregunta, escribe "no aborda". Marca todo PENDIENTE-VALIDAR.</div>
+  <p class="pnota"><strong>2 · Descargar el material (PDFs + abstracts) y llenar la Matriz Q:</strong></p>
+  <div class="codebox" id="pc-e4b">De los artículos que seleccioné, primero completa el material:
+descarga a bibliografia/pdf/ los PDF de acceso abierto cuya
+licencia lo permita (incluye repositorios institucionales y
+espejos legítimos) y registra el abstract real de cada fuente
+(editor, PubMed, arXiv, Semantic Scholar o Crossref); guarda en
+bibliografia/metadatos/ la ficha de TODOS. Si un editor bloquea
+la descarga automatizada o el artículo es de pago, NO evadas el
+bloqueo: registra la URL en descargas.md.
+Después llena bibliografia/matriz_q.csv: qué responde cada fuente
+a Q1–Q3 (con cita textual) y qué vacío deja.
+REGLA DURA: las preguntas SOLO se responden desde fuentes con PDF
+descargado y/o abstract real; lo demás queda SOLO-REFERENCIA y no
+responde nada. Si no aborda una pregunta, escribe "no aborda".
+Marca todo PENDIENTE-VALIDAR.</div>
   <button class="pcopy" data-copia="pc-e4b">⧉ Copiar prompt</button>
-  <p class="pnota">🪢 URL explícita por fuente; descargas solo con licencia; la selección la hace el investigador.</p>
+  <p class="pnota">🪢 Criterio de usabilidad: PDF descargado y/o abstract real, más referencia
+  verificada. Descargas solo con licencia; la selección la hace el investigador.</p>
 </div></div>
 
 <div class="pmodal-back hidden" id="pm-e5"><div class="pmodal"><button class="pmodal-close">✕</button>

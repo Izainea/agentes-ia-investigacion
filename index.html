@@ -520,32 +520,40 @@ ecuación booleana. Ejecútala contra la API de OpenAlex, guarda el
 JSON en datos/busqueda_2026-07-30_openalex.json y registra:
 ecuación exacta, total identificado, filtros y total tras filtros.
 NO selecciones todavía: lista los 15 más citados con título, año,
-DOI, conteo de citas y — explícitamente — la URL de acceso de
-cada uno (y la URL del PDF si es de acceso abierto).</pre>
+DOI, conteo de citas, la URL de acceso explícita de cada uno y si
+su ABSTRACT está disponible en una fuente verificable (editor,
+PubMed, arXiv, Semantic Scholar, Crossref). Prioriza las fuentes
+con abstract disponible.</pre>
       <button class="copy-btn" data-copy>⧉ Copiar</button>
     </div>
-    <div class="arnes">🪢 <strong>Arnés:</strong> conteos por etapa (insumo del PRISMA) y URL
-    explícita por resultado. La <em>selección</em> de artículos la hace el investigador.</div>
-    <p><strong>Segunda parte — la Matriz Q:</strong> extraer de cada artículo <em>qué responde
-    a cada pregunta</em> — con cita textual localizable y URL de acceso — y qué vacío deja.</p>
+    <div class="arnes">🪢 <strong>Arnés:</strong> conteos por etapa (insumo del PRISMA), URL y
+    disponibilidad de abstract por resultado. La <em>selección</em> la hace el investigador.</div>
+    <p><strong>Segunda parte — descargar el material y llenar la Matriz Q:</strong> completar
+    PDF y abstract de cada fuente elegida, y extraer <em>qué responde a cada pregunta</em>
+    con cita localizable.</p>
     <div class="prompt-block">
       <pre>De los artículos que seleccioné (marcados en datos/seleccion.md),
-llena bibliografia/matriz_q.csv con estas columnas: referencia APA,
-año, DOI, URL de acceso explícita, base y ecuación de origen, qué
-responde a Q1, a Q2 y a Q3 (con cita textual y sección), y qué
-vacío deja. Descarga a bibliografia/pdf/ los PDF de acceso abierto
-cuya licencia lo permita y guarda los metadatos de TODOS en
-bibliografia/metadatos/. Si un editor bloquea la descarga
-automatizada o el artículo es de pago, NO evadas el bloqueo:
-registra la URL en descargas.md para mi descarga manual.
-Regla dura: si un artículo no dice nada sobre una pregunta,
-escribe "no aborda" — no extrapoles. Marca cada fila como
-PENDIENTE-VALIDAR hasta que yo la revise.</pre>
+primero completa el material: descarga a bibliografia/pdf/ los PDF
+de acceso abierto cuya licencia lo permita (incluye repositorios
+institucionales y espejos legítimos) y registra el abstract real
+de cada fuente (editor, PubMed, arXiv, Semantic Scholar o
+Crossref); guarda los metadatos de TODOS en bibliografia/metadatos/.
+Si un editor bloquea la descarga automatizada o el artículo es de
+pago, NO evadas el bloqueo: registra la URL en descargas.md.
+Después llena bibliografia/matriz_q.csv: referencia APA, año, DOI,
+URL, abstract, PDF en el proyecto, qué responde a Q1, Q2 y Q3
+(con cita textual y sección) y qué vacío deja.
+REGLA DURA (criterio de usabilidad): las preguntas SOLO pueden
+responderse desde fuentes con PDF descargado y/o abstract real;
+lo demás queda como SOLO-REFERENCIA y no responde nada. Si un
+artículo no dice nada sobre una pregunta, escribe "no aborda".
+Marca cada fila PENDIENTE-VALIDAR hasta que yo la revise.</pre>
       <button class="copy-btn" data-copy>⧉ Copiar</button>
     </div>
-    <div class="arnes">🪢 <strong>Arnés:</strong> DOI verificado y URL explícita por fuente;
-    conteos por etapa (PRISMA); descargas solo con licencia; "no aborda" en vez de relleno
-    plausible. La selección la hace el investigador.</div>
+    <div class="arnes">🪢 <strong>Arnés — criterio de usabilidad:</strong> una fuente solo
+    sustenta afirmaciones con PDF descargado y/o abstract real registrado, más la referencia
+    verificada; descargas solo con licencia; "no aborda" en vez de relleno. El investigador
+    valida cada fila.</div>
     <div class="tip">💡 <strong>Tip:</strong> registrar los conteos de cada búsqueda desde el
     primer día: el diagrama PRISMA se arma solo.</div>
     <p class="artefacto">📄 <strong>Artefacto:</strong> <code>datos/busqueda_*.json</code> ·
@@ -765,7 +773,9 @@ Reglas (además de las del proyecto en GEMINI.md / .agents/rules/):
   <h3 class="h3-line">📚 Agente 2 · Sintetizador — la Matriz Q del caso <span class="mini">(clic en cada fila)</span></h3>
   <p>Siete fuentes reales sobre la pregunta del caso, con DOI resuelto, URL de acceso y estado
   de verificación. Cada fila indica qué responde el artículo a Q1 (esfuerzo), Q2 (memoria y
-  pensamiento crítico) y Q3 (vulnerables), y qué vacío deja.</p>
+  pensamiento crítico) y Q3 (vulnerables), y qué vacío deja. El corpus cumple el
+  <strong>criterio de usabilidad</strong> del proyecto: cada fuente tiene PDF descargado
+  y/o abstract real registrado, además de la referencia verificada.</p>
 
   <div class="mq-wrap">
     <table class="mq-table" id="mq-table">
@@ -779,7 +789,7 @@ Reglas (además de las del proyecto en GEMINI.md / .agents/rules/):
           <strong>Q2:</strong> se recuerda mejor <em>dónde</em> encontrarla que su contenido.
           <strong>Q3:</strong> no aborda perfiles de usuario.
           <strong>Vacío:</strong> estudia buscadores, no IA generativa.</p>
-          <p class="mini">Sparrow, B., Liu, J., &amp; Wegner, D. M. (2011). Google effects on memory. <em>Science, 333</em>(6043), 776–778. URL: <a href="https://doi.org/10.1126/science.1207745" target="_blank" rel="noopener">doi.org/10.1126/science.1207745</a> · acceso cerrado → descarga institucional</p>
+          <p class="mini">Sparrow, B., Liu, J., &amp; Wegner, D. M. (2011). Google effects on memory. <em>Science, 333</em>(6043), 776–778. URL: <a href="https://doi.org/10.1126/science.1207745" target="_blank" rel="noopener">doi.org/10.1126/science.1207745</a> · acceso cerrado → descarga institucional · abstract: Crossref (en matriz_q.xlsx)</p>
         </td></tr>
         <tr class="mq-row" data-mq="d2"><td>Risko &amp; Gilbert — <em>Trends in Cognitive Sciences</em></td><td>2016</td><td>El marco de la "descarga cognitiva": eficiente, pero con costos ocultos</td><td><span class="st fix">DOI corregido por el arnés</span></td></tr>
         <tr class="mq-detail hidden" id="d2"><td colspan="4">
@@ -787,19 +797,19 @@ Reglas (además de las del proyecto en GEMINI.md / .agents/rules/):
           <strong>Q2:</strong> menor memoria interna cuando se confía en memoria externa.
           <strong>Q3:</strong> la metacognición modula quién descarga más.
           <strong>Vacío:</strong> anterior a los LLM.</p>
-          <p class="mini">Risko, E. F., &amp; Gilbert, S. J. (2016). Cognitive offloading. <em>TiCS, 20</em>(9), 676–688. URL: <a href="https://doi.org/10.1016/j.tics.2016.07.002" target="_blank" rel="noopener">doi.org/10.1016/j.tics.2016.07.002</a></p>
+          <p class="mini">Risko, E. F., &amp; Gilbert, S. J. (2016). Cognitive offloading. <em>TiCS, 20</em>(9), 676–688. URL: <a href="https://doi.org/10.1016/j.tics.2016.07.002" target="_blank" rel="noopener">doi.org/10.1016/j.tics.2016.07.002</a> · abstract completo: PubMed (en matriz_q.xlsx)</p>
           <p class="mini">⚠️ <strong>Historia de esta fila:</strong> el agente registró primero un DOI equivocado
           (<code>…2016.06.007</code>, que pertenece a otro artículo). La regla del arnés — todo DOI se resuelve
           antes de usarse — lo detectó el 29 de julio; quedó corregido y documentado en
           <a href="investigacion/bibliografia/descargas.md" target="_blank" rel="noopener">descargas.md</a>.
           El error fue del agente; la detección, del método.</p>
         </td></tr>
-        <tr class="mq-row" data-mq="d3"><td>Ward et al. — <em>JACR</em></td><td>2017</td><td>"Brain drain": la sola presencia del celular reduce la capacidad disponible</td><td><span class="st ok">verificada</span></td></tr>
+        <tr class="mq-row" data-mq="d3"><td>Ward et al. — <em>JACR</em></td><td>2017</td><td>"Brain drain": la sola presencia del celular reduce la capacidad disponible</td><td><span class="st ok">verificada · PDF ↓</span></td></tr>
         <tr class="mq-detail hidden" id="d3"><td colspan="4">
           <p><strong>Q1:</strong> la sola presencia del dispositivo consume capacidad cognitiva.
           <strong>Q3:</strong> mayor efecto en quienes más dependen del dispositivo.
           <strong>Vacío:</strong> smartphones, no asistentes de IA.</p>
-          <p class="mini">Ward, A. F., Duke, K., Gneezy, A., &amp; Bos, M. W. (2017). Brain drain. <em>JACR, 2</em>(2), 140–154. URL: <a href="https://doi.org/10.1086/691462" target="_blank" rel="noopener">doi.org/10.1086/691462</a> · copia OA: <a href="https://doi.org/10.15781/t2j679d4s" target="_blank" rel="noopener">repositorio</a></p>
+          <p class="mini">Ward, A. F., Duke, K., Gneezy, A., &amp; Bos, M. W. (2017). Brain drain. <em>JACR, 2</em>(2), 140–154. URL: <a href="https://doi.org/10.1086/691462" target="_blank" rel="noopener">doi.org/10.1086/691462</a> · <strong>PDF descargado</strong> en <code>bibliografia/pdf/</code> (repositorio Texas ScholarWorks, <a href="https://doi.org/10.15781/t2j679d4s" target="_blank" rel="noopener">copia OA</a>)</p>
         </td></tr>
         <tr class="mq-row" data-mq="d4"><td>Gerlich — <em>Societies</em></td><td>2025</td><td>Más uso de IA ↔ menos pensamiento crítico, mediado por descarga cognitiva (n=666)</td><td><span class="st ok">verificada · OA</span></td></tr>
         <tr class="mq-detail hidden" id="d4"><td colspan="4">
@@ -807,7 +817,7 @@ Reglas (además de las del proyecto en GEMINI.md / .agents/rules/):
           <strong>Q2:</strong> correlación negativa con desempeño en pensamiento crítico.
           <strong>Q3:</strong> más fuerte en usuarios jóvenes y frecuentes.
           <strong>Vacío:</strong> correlacional, autorreporte: no demuestra causalidad.</p>
-          <p class="mini">Gerlich, M. (2025). AI tools in society. <em>Societies, 15</em>(1), 6. URL: <a href="https://doi.org/10.3390/soc15010006" target="_blank" rel="noopener">doi.org/10.3390/soc15010006</a> · PDF OA: <a href="https://www.mdpi.com/2075-4698/15/1/6/pdf" target="_blank" rel="noopener">mdpi.com</a> (el editor bloquea la descarga automatizada → un clic manual)</p>
+          <p class="mini">Gerlich, M. (2025). AI tools in society. <em>Societies, 15</em>(1), 6. URL: <a href="https://doi.org/10.3390/soc15010006" target="_blank" rel="noopener">doi.org/10.3390/soc15010006</a> · PDF OA: <a href="https://www.mdpi.com/2075-4698/15/1/6/pdf" target="_blank" rel="noopener">mdpi.com</a> (el editor bloquea la descarga automatizada → un clic manual) · abstract completo: Semantic Scholar (en matriz_q.xlsx)</p>
         </td></tr>
         <tr class="mq-row" data-mq="d5"><td>Lee et al. — Microsoft Research / CMU, <em>CHI</em></td><td>2025</td><td>A mayor confianza en la IA, menor pensamiento crítico autorreportado (319 trabajadores)</td><td><span class="st ok">verificada · OA</span></td></tr>
         <tr class="mq-detail hidden" id="d5"><td colspan="4">
@@ -815,7 +825,7 @@ Reglas (además de las del proyecto en GEMINI.md / .agents/rules/):
           <strong>Q2:</strong> a mayor confianza en la herramienta, menor ejercicio crítico autorreportado (936 tareas reales).
           <strong>Q3:</strong> justamente los usuarios que más confían: los "mejores usuarios".
           <strong>Vacío:</strong> autorreporte; contexto laboral.</p>
-          <p class="mini">Lee, H.-P., et al. (2025). The impact of generative AI on critical thinking. <em>CHI '25</em>. URL: <a href="https://doi.org/10.1145/3706598.3713778" target="_blank" rel="noopener">doi.org/10.1145/3706598.3713778</a> · PDF: <a href="https://dl.acm.org/doi/pdf/10.1145/3706598.3713778" target="_blank" rel="noopener">ACM DL</a></p>
+          <p class="mini">Lee, H.-P., et al. (2025). The impact of generative AI on critical thinking. <em>CHI '25</em>. URL: <a href="https://doi.org/10.1145/3706598.3713778" target="_blank" rel="noopener">doi.org/10.1145/3706598.3713778</a> · PDF: <a href="https://dl.acm.org/doi/pdf/10.1145/3706598.3713778" target="_blank" rel="noopener">ACM DL</a> · abstract completo: Semantic Scholar (en matriz_q.xlsx)</p>
           <p class="mini">🔁 <strong>Verificación repetible:</strong> este DOI se resolvió con el agente
           el 29 de julio; cualquiera puede repetir la comprobación en doi.org. Esa repetibilidad
           es, precisamente, el arnés.</p>
@@ -828,13 +838,13 @@ Reglas (además de las del proyecto en GEMINI.md / .agents/rules/):
           <strong>Vacío:</strong> preprint, n pequeño, tarea específica de ensayo.</p>
           <p class="mini">Kosmyna, N., et al. (2025). Your brain on ChatGPT. URL: <a href="https://arxiv.org/abs/2506.08872" target="_blank" rel="noopener">arxiv.org/abs/2506.08872</a> · PDF descargado en <code>bibliografia/pdf/</code> (37 MB)</p>
         </td></tr>
-        <tr class="mq-row" data-mq="d7"><td>Dell'Acqua et al. — Harvard Business School</td><td>2023</td><td>"Dormidos al volante": la pericia no protege de la sobreconfianza fuera de la frontera de la IA</td><td><span class="st ok">verificada</span></td></tr>
+        <tr class="mq-row" data-mq="d7"><td>Dell'Acqua et al. — Harvard Business School</td><td>2023</td><td>"Dormidos al volante": la pericia no protege de la sobreconfianza fuera de la frontera de la IA</td><td><span class="st ok">verificada · PDF ↓</span></td></tr>
         <tr class="mq-detail hidden" id="d7"><td colspan="4">
           <p><strong>Q1:</strong> dentro de la "frontera" de la IA, mejora el desempeño con menos esfuerzo.
           <strong>Q2:</strong> fuera de la frontera, quienes confían ciegamente empeoran resultados.
           <strong>Q3:</strong> consultores expertos (n=758): los "mejores usuarios" también caen.
           <strong>Vacío:</strong> tareas de consultoría; la frontera cambia con cada modelo.</p>
-          <p class="mini">Dell'Acqua, F., et al. (2023). Navigating the jagged technological frontier. URL: <a href="https://doi.org/10.2139/ssrn.4573321" target="_blank" rel="noopener">doi.org/10.2139/ssrn.4573321</a> · versión publicada (2026): <a href="https://doi.org/10.1287/orsc.2025.21838" target="_blank" rel="noopener">Organization Science</a></p>
+          <p class="mini">Dell'Acqua, F., et al. (2023). Navigating the jagged technological frontier. URL: <a href="https://doi.org/10.2139/ssrn.4573321" target="_blank" rel="noopener">doi.org/10.2139/ssrn.4573321</a> · versión publicada (2026): <a href="https://doi.org/10.1287/orsc.2025.21838" target="_blank" rel="noopener">Organization Science</a> · <strong>PDF descargado</strong> en <code>bibliografia/pdf/</code> (working paper público, espejo institucional MIT Sloan)</p>
         </td></tr>
       </tbody>
     </table>
@@ -849,6 +859,15 @@ Reglas (además de las del proyecto en GEMINI.md / .agents/rules/):
   al verificar los DOI de la matriz, el propio agente detectó que había registrado uno equivocado
   — la fila de Risko &amp; Gilbert. La regla lo atrapó; quedó corregido y documentado.
   <em>La verificación no es desconfianza: es método.</em></div>
+
+  <div class="arnes">🪢 <strong>Criterio de usabilidad del corpus (regla 3c del arnés):</strong>
+  las preguntas solo se responden desde fuentes con PDF descargado y/o abstract real.
+  Estado real de este proyecto: <strong>PDFs 3/7</strong> (Kosmyna — arXiv; Ward — repositorio
+  Texas ScholarWorks; Dell'Acqua — espejo institucional MIT Sloan) ·
+  <strong>abstracts reales 5/7</strong> (arXiv, Semantic Scholar, PubMed, Crossref) ·
+  <strong>criterio cumplido 7/7</strong>. Detalle en
+  <a href="investigacion/bibliografia/matriz_q.xlsx" target="_blank" rel="noopener">matriz_q.xlsx</a> y
+  <a href="investigacion/bibliografia/descargas.md" target="_blank" rel="noopener">descargas.md</a>.</div>
 
   <div class="prisma-def">
     <div class="prisma-def-txt">

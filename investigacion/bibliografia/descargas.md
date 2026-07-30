@@ -11,14 +11,21 @@ Ejecución: 2026-07-29, vía API de OpenAlex (`best_oa_location` / `open_access.
 |---|---|---|---|
 | Sparrow et al. (2011) | https://doi.org/10.1126/science.1207745 | Cerrado (Science) | — solo metadatos; descarga vía acceso institucional |
 | Risko & Gilbert (2016) | https://doi.org/10.1016/j.tics.2016.07.002 | Cerrado (Elsevier) | — solo metadatos; descarga vía acceso institucional |
-| Ward et al. (2017) | https://doi.org/10.1086/691462 · copia OA: https://doi.org/10.15781/t2j679d4s | Verde (repositorio) | — URL registrada (repositorio Texas ScholarWorks) |
+| Ward et al. (2017) | https://doi.org/10.1086/691462 · copia OA: https://doi.org/10.15781/t2j679d4s | Verde (repositorio) | ✅ `ward_2017_brain_drain.pdf` (descargado del repositorio Texas ScholarWorks, 2026-07-30) |
 | Gerlich (2025) | https://doi.org/10.3390/soc15010006 · PDF: https://www.mdpi.com/2075-4698/15/1/6/pdf | Dorado (MDPI) | ✗ el sitio bloqueó la descarga automatizada (403) → **descargar manualmente en 1 clic** |
 | Lee et al. (2025) | https://doi.org/10.1145/3706598.3713778 · PDF: https://dl.acm.org/doi/pdf/10.1145/3706598.3713778 | Dorado (ACM) | ✗ bloqueo anti-bot (403) → **descargar manualmente en 1 clic** |
 | Kosmyna et al. (2025) | https://arxiv.org/abs/2506.08872 · PDF: https://arxiv.org/pdf/2506.08872 | Verde (arXiv) | ✅ `kosmyna_2025_cognitive_debt.pdf` (37 MB — el preprint incluye apéndices extensos) |
-| Dell'Acqua et al. (2023) | https://doi.org/10.2139/ssrn.4573321 · versión publicada (2026): https://doi.org/10.1287/orsc.2025.21838 | SSRN (registro) / Org. Science (cerrado) | — URL registrada; SSRN requiere descarga manual |
+| Dell'Acqua et al. (2023) | https://doi.org/10.2139/ssrn.4573321 · versión publicada (2026): https://doi.org/10.1287/orsc.2025.21838 | SSRN (registro) / Org. Science (cerrado) | ✅ `dellacqua_2023_jagged_frontier.pdf` (working paper público, espejo institucional MIT Sloan, 2026-07-30; SSRN y hbs.edu bloquean el fetch directo) |
 
 **Metadatos completos:** carpeta `metadatos/` — un JSON de OpenAlex por fuente (título, autores,
 año, DOI, estado de acceso abierto, conteo de citas, ubicaciones).
+
+**Criterio de usabilidad (CLAUDE.md, regla 3c):** una fuente solo sustenta afirmaciones si su
+PDF está descargado y/o su abstract real está registrado, además de la referencia verificada.
+Estado del corpus: **PDFs 3/7** (Kosmyna—arXiv; Ward—Texas ScholarWorks; Dell'Acqua—espejo MIT
+Sloan) · **abstracts reales 5/7** (arXiv, Semantic Scholar, PubMed, Crossref; los 2 restantes
+llevan síntesis rotulada y tienen PDF o acceso institucional) · **criterio cumplido 7/7**.
+Los abstracts están integrados en `matriz_q.xlsx`.
 
 ## Incidente de verificación (documentado a propósito)
 

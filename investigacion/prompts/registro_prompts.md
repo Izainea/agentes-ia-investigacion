@@ -56,11 +56,13 @@ Así cualquier lector puede reconstruir *cómo* se hizo esta investigación.
 > ecuación booleana. Ejecútala contra la API de OpenAlex, guarda el JSON completo en
 > datos/busqueda_2026-07-30_openalex.json, y registra: ecuación exacta, total identificado,
 > filtros aplicados y total tras filtros. NO selecciones todavía: solo lista los 15 más
-> citados con título, año, DOI, conteo de citas y — EXPLÍCITAMENTE — la URL de acceso
-> de cada uno (DOI resuelto y, si existe, la URL del PDF de acceso abierto).
+> citados con título, año, DOI, conteo de citas, la URL de acceso EXPLÍCITA de cada uno
+> (DOI resuelto y, si existe, URL del PDF de acceso abierto) y si su ABSTRACT está
+> disponible en una fuente verificable (editor, PubMed, arXiv, Semantic Scholar, Crossref).
+> Prioriza en la lista las fuentes con abstract disponible.
 
-**Arnés aplicado:** conteos por etapa para PRISMA; URL explícita por resultado; la selección
-la hace el investigador.
+**Arnés aplicado:** conteos por etapa para PRISMA; URL y disponibilidad de abstract por
+resultado; la selección la hace el investigador.
 
 ---
 
@@ -68,18 +70,23 @@ la hace el investigador.
 
 **Propósito:** extraer con trazabilidad lo que cada artículo responde a cada pregunta.
 
-> De los artículos que seleccioné (marcados en datos/seleccion.md), llena
-> bibliografia/matriz_q.csv con estas columnas: referencia APA, año, DOI, URL de acceso
-> explícita, base y ecuación de origen, qué responde a Q1, a Q2 y a Q3 (con cita textual
-> y sección), y qué vacío deja. Descarga a bibliografia/pdf/ los PDF que sean de acceso
-> abierto y cuya licencia lo permita; guarda los metadatos de TODOS en
-> bibliografia/metadatos/. Si un editor bloquea la descarga automatizada o el artículo es
-> de pago, NO evadas el bloqueo: registra la URL en descargas.md para descarga manual.
-> Regla dura: si un artículo no dice nada sobre una pregunta, escribe "no aborda" — no
-> extrapoles. Marca cada fila como PENDIENTE-VALIDAR hasta que yo la revise.
+> De los artículos que seleccioné (marcados en datos/seleccion.md), primero completa el
+> material: descarga a bibliografia/pdf/ los PDF de acceso abierto cuya licencia lo
+> permita (incluye repositorios institucionales y espejos legítimos) y registra el
+> abstract real de cada fuente (editor, PubMed, arXiv, Semantic Scholar o Crossref);
+> guarda los metadatos de TODOS en bibliografia/metadatos/. Si un editor bloquea la
+> descarga automatizada o el artículo es de pago, NO evadas el bloqueo: registra la URL
+> en descargas.md para descarga manual.
+> Después llena bibliografia/matriz_q.csv: referencia APA, año, DOI, URL, abstract,
+> PDF en el proyecto, qué responde a Q1, Q2 y Q3 (con cita textual y sección) y qué
+> vacío deja. REGLA DURA (criterio de usabilidad): las preguntas SOLO pueden responderse
+> desde fuentes con PDF descargado y/o abstract real registrado; lo que no cumpla ese
+> mínimo queda como SOLO-REFERENCIA y no responde nada. Si un artículo no dice nada
+> sobre una pregunta, escribe "no aborda" — no extrapoles. Marca cada fila como
+> PENDIENTE-VALIDAR hasta que yo la revise.
 
-**Arnés aplicado:** URL explícita por fuente; descargas solo con licencia; citas textuales
-localizables; "no aborda" en vez de relleno plausible.
+**Arnés aplicado:** criterio de usabilidad (PDF y/o abstract real); URL explícita;
+descargas solo con licencia; citas textuales localizables; "no aborda" en vez de relleno.
 
 ---
 
