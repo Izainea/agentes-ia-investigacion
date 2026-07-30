@@ -17,7 +17,7 @@ evaluación crítica. **H0:** no existe asociación medible.
 | 1 | Definir el problema (5 porqués) | Sección "problema" de `plan.md` | El problema es genuino: lo formulé yo, el agente solo preguntó |
 | 2 | Refinar pregunta e hipótesis | Este documento | La pregunta tiene X, Y, población y condición de uso; H0/H1 falsables |
 | 3 | Ecuación de búsqueda y ejecución | `datos/busqueda_*.json` | Ecuación replicable; conteos por etapa registrados |
-| 4 | Selección y Matriz Q | `bibliografia/matriz_q.csv` | Cada fila con cita textual localizable; DOI verificado |
+| 4 | Selección y Matriz Q | `bibliografia/matriz_q.xlsx` | Cada fila con cita localizable, DOI verificado y PDF y/o abstract real |
 | 5 | Síntesis y brechas | `articulo/sintesis.md` | Cada afirmación cierra con (Autor, año); brechas en fórmula "falta X en Y con Z" |
 | 6 | Artículo de divulgación | `articulo/articulo_prensa.md` | Reescrito y firmado por el investigador; declaración de uso de IA incluida |
 

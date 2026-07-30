@@ -158,7 +158,7 @@
 ├── prompts/             ← registro de prompts (memoria metodológica)
 ├── datos/               ← resultados de búsquedas, con fecha
 ├── bibliografia/
-│   ├── matriz_q.csv     ← qué responde cada fuente a cada pregunta
+│   ├── matriz_q.xlsx    ← qué responde cada fuente a cada pregunta
 │   ├── metadatos/       ← ficha JSON por artículo (OpenAlex)
 │   └── pdf/             ← solo PDFs cuya licencia permite descarga
 ├── artefactos/          ← SVG, HTML, JS — cada uno con su prompt
@@ -557,7 +557,7 @@ Marca cada fila PENDIENTE-VALIDAR hasta que yo la revise.</pre>
     <div class="tip">💡 <strong>Tip:</strong> registrar los conteos de cada búsqueda desde el
     primer día: el diagrama PRISMA se arma solo.</div>
     <p class="artefacto">📄 <strong>Artefacto:</strong> <code>datos/busqueda_*.json</code> ·
-    <code>bibliografia/matriz_q.csv</code> · <code>pdf/</code> · <code>metadatos/</code> —
+    <code>bibliografia/matriz_q.xlsx</code> · <code>pdf/</code> · <code>metadatos/</code> —
     versión interactiva en la <a href="#agentes">sección 04 ↓</a></p>
    </div>
   </div>
@@ -850,10 +850,9 @@ Reglas (además de las del proyecto en GEMINI.md / .agents/rules/):
     </table>
   </div>
   <p class="mini">Fuente: <a href="investigacion/bibliografia/matriz_q.xlsx" target="_blank" rel="noopener">matriz_q.xlsx</a>
-  (versión evaluativa, con calidad por fuente y hoja de resumen) ·
-  <a href="investigacion/bibliografia/matriz_q.csv" target="_blank" rel="noopener">matriz_q.csv</a> (texto plano) ·
+  (matriz evaluativa: abstract, PDF, calidad por fuente y hoja de resumen) ·
   URLs y descargas en <a href="investigacion/bibliografia/descargas.md" target="_blank" rel="noopener">descargas.md</a> ·
-  metadatos en <code>bibliografia/metadatos/</code> · PDF OA en <code>bibliografia/pdf/</code></p>
+  metadatos en <code>bibliografia/metadatos/</code> · PDF en <code>bibliografia/pdf/</code></p>
 
   <div class="arnes arnes-story">🪢 <strong>El arnés en funcionamiento (caso real de esta página):</strong>
   al verificar los DOI de la matriz, el propio agente detectó que había registrado uno equivocado
@@ -1076,7 +1075,7 @@ apto para un documento académico. Guárdalo en artefactos/.</pre>
 ├── prompts/             ← registro de prompts (memoria metodológica)
 ├── datos/               ← búsquedas con fecha y conteos (→ PRISMA)
 ├── bibliografia/
-│   ├── matriz_q.csv     ← síntesis por preguntas, con URL por fuente
+│   ├── matriz_q.xlsx    ← síntesis por preguntas, con abstract y PDF por fuente
 │   ├── metadatos/       ← JSON de OpenAlex por artículo
 │   ├── pdf/             ← PDFs de acceso abierto descargados
 │   └── descargas.md     ← URLs explícitas + qué se descargó y qué no

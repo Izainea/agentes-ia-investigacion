@@ -47,7 +47,8 @@ multiplica también sus errores.
 - `plan.md` — plan de investigación; cada etapa tiene entregable y criterio de verificación.
 - `prompts/` — registro de prompts usados (memoria metodológica del proyecto).
 - `datos/` — resultados de búsquedas (JSON/CSV), nombrados `busqueda_AAAA-MM-DD_<base>.json`.
-- `bibliografia/` — `matriz_q.csv` + `referencias.md` con estado de verificación.
+- `bibliografia/` — `matriz_q.xlsx` (matriz evaluativa con abstracts y PDFs) + `referencias.md`
+  y `descargas.md` con estados de verificación y URLs.
 - `artefactos/` — SVG, HTML, JS generados; cada uno con el prompt que lo produjo.
 - `articulo/` — borradores y versión final del producto de divulgación.
 
