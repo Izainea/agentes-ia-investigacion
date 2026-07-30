@@ -1,0 +1,135 @@
+﻿{
+    "display_name":  "AI Tools in Society: Impacts on Cognitive Offloading and the Future of Critical Thinking",
+    "publication_year":  2025,
+    "doi":  "https://doi.org/10.3390/soc15010006",
+    "type":  "article",
+    "open_access":  {
+                        "is_oa":  true,
+                        "oa_status":  "gold",
+                        "oa_url":  "https://www.mdpi.com/2075-4698/15/1/6/pdf?version=1735907439",
+                        "any_repository_has_fulltext":  true
+                    },
+    "best_oa_location":  {
+                             "id":  "doi:10.3390/soc15010006",
+                             "is_oa":  true,
+                             "landing_page_url":  "https://doi.org/10.3390/soc15010006",
+                             "pdf_url":  "https://www.mdpi.com/2075-4698/15/1/6/pdf?version=1735907439",
+                             "source":  {
+                                            "id":  "https://openalex.org/S4210173133",
+                                            "display_name":  "Societies",
+                                            "issn_l":  "2075-4698",
+                                            "issn":  [
+                                                         "2075-4698"
+                                                     ],
+                                            "is_oa":  true,
+                                            "is_in_doaj":  true,
+                                            "is_core":  true,
+                                            "host_organization":  "https://openalex.org/P4310310987",
+                                            "host_organization_name":  "Multidisciplinary Digital Publishing Institute",
+                                            "host_organization_lineage":  [
+                                                                              "https://openalex.org/P4310310987"
+                                                                          ],
+                                            "host_organization_lineage_names":  [
+                                                                                    "Multidisciplinary Digital Publishing Institute"
+                                                                                ],
+                                            "type":  "journal"
+                                        },
+                             "license":  "cc-by",
+                             "license_id":  "https://openalex.org/licenses/cc-by",
+                             "version":  "publishedVersion",
+                             "is_accepted":  true,
+                             "is_published":  true,
+                             "raw_source_name":  "Societies",
+                             "raw_type":  "journal-article"
+                         },
+    "primary_location":  {
+                             "id":  "doi:10.3390/soc15010006",
+                             "is_oa":  true,
+                             "landing_page_url":  "https://doi.org/10.3390/soc15010006",
+                             "pdf_url":  "https://www.mdpi.com/2075-4698/15/1/6/pdf?version=1735907439",
+                             "source":  {
+                                            "id":  "https://openalex.org/S4210173133",
+                                            "display_name":  "Societies",
+                                            "issn_l":  "2075-4698",
+                                            "issn":  [
+                                                         "2075-4698"
+                                                     ],
+                                            "is_oa":  true,
+                                            "is_in_doaj":  true,
+                                            "is_core":  true,
+                                            "host_organization":  "https://openalex.org/P4310310987",
+                                            "host_organization_name":  "Multidisciplinary Digital Publishing Institute",
+                                            "host_organization_lineage":  [
+                                                                              "https://openalex.org/P4310310987"
+                                                                          ],
+                                            "host_organization_lineage_names":  [
+                                                                                    "Multidisciplinary Digital Publishing Institute"
+                                                                                ],
+                                            "type":  "journal"
+                                        },
+                             "license":  "cc-by",
+                             "license_id":  "https://openalex.org/licenses/cc-by",
+                             "version":  "publishedVersion",
+                             "is_accepted":  true,
+                             "is_published":  true,
+                             "raw_source_name":  "Societies",
+                             "raw_type":  "journal-article"
+                         },
+    "cited_by_count":  739,
+    "authorships":  [
+                        {
+                            "author_position":  "first",
+                            "author":  {
+                                           "id":  "https://openalex.org/A5058773312",
+                                           "display_name":  "Michael Gerlich",
+                                           "orcid":  "https://orcid.org/0000-0003-4033-4403"
+                                       },
+                            "institutions":  [
+                                                 {
+                                                     "id":  "https://openalex.org/I2801290870",
+                                                     "display_name":  "Business School Lausanne",
+                                                     "ror":  "https://ror.org/03x0g5n48",
+                                                     "country_code":  "CH",
+                                                     "type":  "education",
+                                                     "lineage":  [
+                                                                     "https://openalex.org/I2801290870"
+                                                                 ]
+                                                 },
+                                                 {
+                                                     "id":  "https://openalex.org/I4399598389",
+                                                     "display_name":  "SBS Swiss Business School",
+                                                     "ror":  "https://ror.org/051qmsg29",
+                                                     "country_code":  null,
+                                                     "type":  "education",
+                                                     "lineage":  [
+                                                                     "https://openalex.org/I4399598389"
+                                                                 ]
+                                                 }
+                                             ],
+                            "countries":  [
+                                              "CH"
+                                          ],
+                            "is_corresponding":  true,
+                            "raw_author_name":  "Michael Gerlich",
+                            "raw_affiliation_strings":  [
+                                                            "Center for Strategic Corporate Foresight and Sustainability, SBS Swiss Business School, 8302 Kloten-Zurich, Switzerland"
+                                                        ],
+                            "raw_orcid":  "https://orcid.org/0000-0003-4033-4403",
+                            "affiliations":  [
+                                                 {
+                                                     "raw_affiliation_string":  "Center for Strategic Corporate Foresight and Sustainability, SBS Swiss Business School, 8302 Kloten-Zurich, Switzerland",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I2801290870",
+                                                                             "https://openalex.org/I4399598389"
+                                                                         ]
+                                                 }
+                                             ]
+                        }
+                    ],
+    "biblio":  {
+                   "volume":  "15",
+                   "issue":  "1",
+                   "first_page":  "6",
+                   "last_page":  "6"
+               }
+}

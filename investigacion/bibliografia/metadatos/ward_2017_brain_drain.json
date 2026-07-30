@@ -1,0 +1,314 @@
+﻿{
+    "display_name":  "Brain Drain: The Mere Presence of One’s Own Smartphone Reduces Available Cognitive Capacity",
+    "publication_year":  2017,
+    "doi":  "https://doi.org/10.1086/691462",
+    "type":  "article",
+    "open_access":  {
+                        "is_oa":  true,
+                        "oa_status":  "green",
+                        "oa_url":  "https://doi.org/10.15781/t2j679d4s",
+                        "any_repository_has_fulltext":  true
+                    },
+    "best_oa_location":  {
+                             "id":  "doi:10.15781/t2j679d4s",
+                             "is_oa":  true,
+                             "landing_page_url":  "https://doi.org/10.15781/t2j679d4s",
+                             "pdf_url":  null,
+                             "source":  {
+                                            "id":  "https://openalex.org/S4306402198",
+                                            "display_name":  "Texas Digital Library (University of Texas)",
+                                            "issn_l":  null,
+                                            "issn":  null,
+                                            "is_oa":  false,
+                                            "is_in_doaj":  false,
+                                            "is_core":  false,
+                                            "host_organization":  "https://openalex.org/I86519309",
+                                            "host_organization_name":  "The University of Texas at Austin",
+                                            "host_organization_lineage":  [
+                                                                              "https://openalex.org/I86519309"
+                                                                          ],
+                                            "host_organization_lineage_names":  [
+
+                                                                                ],
+                                            "type":  "repository"
+                                        },
+                             "license":  null,
+                             "license_id":  null,
+                             "version":  null,
+                             "is_accepted":  false,
+                             "is_published":  false,
+                             "raw_source_name":  null,
+                             "raw_type":  "Other"
+                         },
+    "primary_location":  {
+                             "id":  "doi:10.1086/691462",
+                             "is_oa":  false,
+                             "landing_page_url":  "https://doi.org/10.1086/691462",
+                             "pdf_url":  null,
+                             "source":  {
+                                            "id":  "https://openalex.org/S2735010472",
+                                            "display_name":  "Journal of the Association for Consumer Research",
+                                            "issn_l":  "2378-1815",
+                                            "issn":  [
+                                                         "2378-1815",
+                                                         "2378-1823"
+                                                     ],
+                                            "is_oa":  false,
+                                            "is_in_doaj":  false,
+                                            "is_core":  true,
+                                            "host_organization":  "https://openalex.org/P4310315672",
+                                            "host_organization_name":  "University of Chicago Press",
+                                            "host_organization_lineage":  [
+                                                                              "https://openalex.org/P4310315672",
+                                                                              "https://openalex.org/P4310315690"
+                                                                          ],
+                                            "host_organization_lineage_names":  [
+                                                                                    "University of Chicago Press",
+                                                                                    "University of Chicago"
+                                                                                ],
+                                            "type":  "journal"
+                                        },
+                             "license":  null,
+                             "license_id":  null,
+                             "version":  "publishedVersion",
+                             "is_accepted":  true,
+                             "is_published":  true,
+                             "raw_source_name":  "Journal of the Association for Consumer Research",
+                             "raw_type":  "journal-article"
+                         },
+    "cited_by_count":  745,
+    "authorships":  [
+                        {
+                            "author_position":  "first",
+                            "author":  {
+                                           "id":  "https://openalex.org/A5049743950",
+                                           "display_name":  "Adrian F. Ward",
+                                           "orcid":  "https://orcid.org/0000-0001-8318-7963"
+                                       },
+                            "institutions":  [
+
+                                             ],
+                            "countries":  [
+
+                                          ],
+                            "is_corresponding":  false,
+                            "raw_author_name":  "Adrian F. Ward",
+                            "raw_affiliation_strings":  [
+                                                            ""
+                                                        ],
+                            "raw_orcid":  null,
+                            "affiliations":  [
+                                                 {
+                                                     "raw_affiliation_string":  "",
+                                                     "institution_ids":  [
+
+                                                                         ]
+                                                 }
+                                             ]
+                        },
+                        {
+                            "author_position":  "middle",
+                            "author":  {
+                                           "id":  "https://openalex.org/A5049072678",
+                                           "display_name":  "Kristen Duke",
+                                           "orcid":  "https://orcid.org/0000-0002-9729-1232"
+                                       },
+                            "institutions":  [
+                                                 {
+                                                     "id":  "https://openalex.org/I36258959",
+                                                     "display_name":  "University of California San Diego",
+                                                     "ror":  "https://ror.org/0168r3w48",
+                                                     "country_code":  "US",
+                                                     "type":  "education",
+                                                     "lineage":  [
+                                                                     "https://openalex.org/I36258959"
+                                                                 ]
+                                                 },
+                                                 {
+                                                     "id":  "https://openalex.org/I4210142140",
+                                                     "display_name":  "Walt Disney (United States)",
+                                                     "ror":  "https://ror.org/04eg47h42",
+                                                     "country_code":  "US",
+                                                     "type":  "company",
+                                                     "lineage":  [
+                                                                     "https://openalex.org/I4210142140"
+                                                                 ]
+                                                 },
+                                                 {
+                                                     "id":  "https://openalex.org/I86519309",
+                                                     "display_name":  "The University of Texas at Austin",
+                                                     "ror":  "https://ror.org/00hj54h04",
+                                                     "country_code":  "US",
+                                                     "type":  "education",
+                                                     "lineage":  [
+                                                                     "https://openalex.org/I86519309"
+                                                                 ]
+                                                 }
+                                             ],
+                            "countries":  [
+                                              "US"
+                                          ],
+                            "is_corresponding":  false,
+                            "raw_author_name":  "Kristen Duke",
+                            "raw_affiliation_strings":  [
+                                                            "",
+                                                            "Disney Research, 4720 Forbes Avenue, Pittsburgh, PA 15213",
+                                                            "McCombs School of Business, University of Texas at Austin, 2110 Speedway, Austin, TX 78712",
+                                                            "Rady School of Management, Uni-versity of California, San Diego, 9500 Gilman Drive, La Jolla, CA 92093",
+                                                            "Rady School of Management, University of California, San Diego, 9500 Gilman Drive, La Jolla, CA 92093. Maarten W. Bos"
+                                                        ],
+                            "raw_orcid":  null,
+                            "affiliations":  [
+                                                 {
+                                                     "raw_affiliation_string":  "",
+                                                     "institution_ids":  [
+
+                                                                         ]
+                                                 },
+                                                 {
+                                                     "raw_affiliation_string":  "Disney Research, 4720 Forbes Avenue, Pittsburgh, PA 15213",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I4210142140"
+                                                                         ]
+                                                 },
+                                                 {
+                                                     "raw_affiliation_string":  "McCombs School of Business, University of Texas at Austin, 2110 Speedway, Austin, TX 78712",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I86519309"
+                                                                         ]
+                                                 },
+                                                 {
+                                                     "raw_affiliation_string":  "Rady School of Management, Uni-versity of California, San Diego, 9500 Gilman Drive, La Jolla, CA 92093",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I36258959"
+                                                                         ]
+                                                 },
+                                                 {
+                                                     "raw_affiliation_string":  "Rady School of Management, University of California, San Diego, 9500 Gilman Drive, La Jolla, CA 92093. Maarten W. Bos",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I36258959"
+                                                                         ]
+                                                 }
+                                             ]
+                        },
+                        {
+                            "author_position":  "middle",
+                            "author":  {
+                                           "id":  "https://openalex.org/A5036964534",
+                                           "display_name":  "Ayelet Gneezy",
+                                           "orcid":  "https://orcid.org/0000-0001-6443-4615"
+                                       },
+                            "institutions":  [
+                                                 {
+                                                     "id":  "https://openalex.org/I36258959",
+                                                     "display_name":  "University of California San Diego",
+                                                     "ror":  "https://ror.org/0168r3w48",
+                                                     "country_code":  "US",
+                                                     "type":  "education",
+                                                     "lineage":  [
+                                                                     "https://openalex.org/I36258959"
+                                                                 ]
+                                                 },
+                                                 {
+                                                     "id":  "https://openalex.org/I4210142140",
+                                                     "display_name":  "Walt Disney (United States)",
+                                                     "ror":  "https://ror.org/04eg47h42",
+                                                     "country_code":  "US",
+                                                     "type":  "company",
+                                                     "lineage":  [
+                                                                     "https://openalex.org/I4210142140"
+                                                                 ]
+                                                 },
+                                                 {
+                                                     "id":  "https://openalex.org/I86519309",
+                                                     "display_name":  "The University of Texas at Austin",
+                                                     "ror":  "https://ror.org/00hj54h04",
+                                                     "country_code":  "US",
+                                                     "type":  "education",
+                                                     "lineage":  [
+                                                                     "https://openalex.org/I86519309"
+                                                                 ]
+                                                 }
+                                             ],
+                            "countries":  [
+                                              "US"
+                                          ],
+                            "is_corresponding":  true,
+                            "raw_author_name":  "Ayelet Gneezy",
+                            "raw_affiliation_strings":  [
+                                                            "",
+                                                            "Disney Research, 4720 Forbes Avenue, Pittsburgh, PA 15213",
+                                                            "McCombs School of Business, University of Texas at Austin, 2110 Speedway, Austin, TX 78712",
+                                                            "Rady School of Management, Uni-versity of California, San Diego, 9500 Gilman Drive, La Jolla, CA 92093",
+                                                            "Rady School of Management, University of California, San Diego, 9500 Gilman Drive, La Jolla, CA 92093. Maarten W. Bos"
+                                                        ],
+                            "raw_orcid":  null,
+                            "affiliations":  [
+                                                 {
+                                                     "raw_affiliation_string":  "",
+                                                     "institution_ids":  [
+
+                                                                         ]
+                                                 },
+                                                 {
+                                                     "raw_affiliation_string":  "Disney Research, 4720 Forbes Avenue, Pittsburgh, PA 15213",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I4210142140"
+                                                                         ]
+                                                 },
+                                                 {
+                                                     "raw_affiliation_string":  "McCombs School of Business, University of Texas at Austin, 2110 Speedway, Austin, TX 78712",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I86519309"
+                                                                         ]
+                                                 },
+                                                 {
+                                                     "raw_affiliation_string":  "Rady School of Management, Uni-versity of California, San Diego, 9500 Gilman Drive, La Jolla, CA 92093",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I36258959"
+                                                                         ]
+                                                 },
+                                                 {
+                                                     "raw_affiliation_string":  "Rady School of Management, University of California, San Diego, 9500 Gilman Drive, La Jolla, CA 92093. Maarten W. Bos",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I36258959"
+                                                                         ]
+                                                 }
+                                             ]
+                        },
+                        {
+                            "author_position":  "last",
+                            "author":  {
+                                           "id":  "https://openalex.org/A5052759783",
+                                           "display_name":  "Maarten W. Bos",
+                                           "orcid":  "https://orcid.org/0000-0001-5020-4990"
+                                       },
+                            "institutions":  [
+
+                                             ],
+                            "countries":  [
+
+                                          ],
+                            "is_corresponding":  false,
+                            "raw_author_name":  "Maarten W. Bos",
+                            "raw_affiliation_strings":  [
+                                                            ""
+                                                        ],
+                            "raw_orcid":  null,
+                            "affiliations":  [
+                                                 {
+                                                     "raw_affiliation_string":  "",
+                                                     "institution_ids":  [
+
+                                                                         ]
+                                                 }
+                                             ]
+                        }
+                    ],
+    "biblio":  {
+                   "volume":  "2",
+                   "issue":  "2",
+                   "first_page":  "140",
+                   "last_page":  "154"
+               }
+}

@@ -1,0 +1,46 @@
+{
+  "nota": "Ejecución de ENSAYO previa a la charla (2026-07-29). Datos reales de api.openalex.org. La ejecución definitiva se hace en vivo el 2026-07-30 y se guarda en su propio archivo.",
+  "base": "OpenAlex",
+  "fecha": "2026-07-29",
+  "ecuacion": "(\"cognitive offloading\" OR \"cognitive debt\") AND (\"artificial intelligence\" OR \"generative AI\" OR \"large language model\" OR chatbot)",
+  "etapas_prisma": {
+    "identificados_busqueda_completa": 47844,
+    "tras_filtro_titulo_abstract": 1011,
+    "duplicados_detectados_en_top": 1,
+    "seleccion_humana_incluidos": 7
+  },
+  "top_5_por_citas_tras_filtro": [
+    {
+      "titulo": "AI Tools in Society: Impacts on Cognitive Offloading and the Future of Critical Thinking",
+      "anio": 2025,
+      "citas": 739,
+      "doi": "https://doi.org/10.3390/soc15010006",
+      "nota": "Gerlich 2025 — fila 4 de la Matriz Q"
+    },
+    {
+      "titulo": "The effects of generative AI on collaborative problem-solving and team creativity performance in digital story creation",
+      "anio": 2025,
+      "citas": 85,
+      "doi": "https://doi.org/10.1186/s41239-025-00526-0"
+    },
+    {
+      "titulo": "Supporting Cognition With Modern Technology: Distributed Cognition Today and in an AI-Enhanced Future",
+      "anio": 2022,
+      "citas": 65,
+      "doi": "https://doi.org/10.3389/frai.2022.908261"
+    },
+    {
+      "titulo": "AI Tools in Society (versión preprint SSRN)",
+      "anio": 2025,
+      "citas": 65,
+      "doi": "https://doi.org/10.2139/ssrn.5082524",
+      "nota": "DUPLICADO del #1 — se elimina en el cribado"
+    },
+    {
+      "titulo": "Learners' AI dependence and critical thinking: The psychological mechanism of fatigue and the social buffering role of AI literacy",
+      "anio": 2025,
+      "citas": 58,
+      "doi": "https://doi.org/10.1016/j.actpsy.2025.105725"
+    }
+  ]
+}

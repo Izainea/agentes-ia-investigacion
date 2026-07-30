@@ -1,0 +1,314 @@
+﻿{
+    "display_name":  "The Impact of Generative AI on Critical Thinking: Self-Reported Reductions in Cognitive Effort and Confidence Effects From a Survey of Knowledge Workers",
+    "publication_year":  2025,
+    "doi":  "https://doi.org/10.1145/3706598.3713778",
+    "type":  "conference-paper",
+    "open_access":  {
+                        "is_oa":  true,
+                        "oa_status":  "gold",
+                        "oa_url":  "https://dl.acm.org/doi/pdf/10.1145/3706598.3713778",
+                        "any_repository_has_fulltext":  null
+                    },
+    "best_oa_location":  {
+                             "id":  "doi:10.1145/3706598.3713778",
+                             "is_oa":  true,
+                             "landing_page_url":  "https://doi.org/10.1145/3706598.3713778",
+                             "pdf_url":  "https://dl.acm.org/doi/pdf/10.1145/3706598.3713778",
+                             "source":  null,
+                             "license":  "cc-by",
+                             "license_id":  "https://openalex.org/licenses/cc-by",
+                             "version":  "publishedVersion",
+                             "is_accepted":  true,
+                             "is_published":  true,
+                             "raw_source_name":  "Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems",
+                             "raw_type":  "proceedings-article"
+                         },
+    "primary_location":  {
+                             "id":  "doi:10.1145/3706598.3713778",
+                             "is_oa":  true,
+                             "landing_page_url":  "https://doi.org/10.1145/3706598.3713778",
+                             "pdf_url":  "https://dl.acm.org/doi/pdf/10.1145/3706598.3713778",
+                             "source":  null,
+                             "license":  "cc-by",
+                             "license_id":  "https://openalex.org/licenses/cc-by",
+                             "version":  "publishedVersion",
+                             "is_accepted":  true,
+                             "is_published":  true,
+                             "raw_source_name":  "Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems",
+                             "raw_type":  "proceedings-article"
+                         },
+    "cited_by_count":  374,
+    "authorships":  [
+                        {
+                            "author_position":  "first",
+                            "author":  {
+                                           "id":  "https://openalex.org/A5062891440",
+                                           "display_name":  "Hao-Ping Lee",
+                                           "orcid":  "https://orcid.org/0000-0002-8063-1034"
+                                       },
+                            "institutions":  [
+                                                 {
+                                                     "id":  "https://openalex.org/I74973139",
+                                                     "display_name":  "Carnegie Mellon University",
+                                                     "ror":  "https://ror.org/05x2bcf33",
+                                                     "country_code":  "US",
+                                                     "type":  "education",
+                                                     "lineage":  [
+                                                                     "https://openalex.org/I74973139"
+                                                                 ]
+                                                 }
+                                             ],
+                            "countries":  [
+                                              "US"
+                                          ],
+                            "is_corresponding":  false,
+                            "raw_author_name":  "Hao-Ping (Hank) Lee",
+                            "raw_affiliation_strings":  [
+                                                            "Carnegie Mellon University, Pittsburgh, Pennsylvania, USA"
+                                                        ],
+                            "raw_orcid":  "https://orcid.org/0000-0002-8063-1034",
+                            "affiliations":  [
+                                                 {
+                                                     "raw_affiliation_string":  "Carnegie Mellon University, Pittsburgh, Pennsylvania, USA",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I74973139"
+                                                                         ]
+                                                 }
+                                             ]
+                        },
+                        {
+                            "author_position":  "middle",
+                            "author":  {
+                                           "id":  "https://openalex.org/A5025427198",
+                                           "display_name":  "Advait Sarkar",
+                                           "orcid":  "https://orcid.org/0000-0002-5401-3478"
+                                       },
+                            "institutions":  [
+                                                 {
+                                                     "id":  "https://openalex.org/I4210164937",
+                                                     "display_name":  "Microsoft Research (United Kingdom)",
+                                                     "ror":  "https://ror.org/05k87vq12",
+                                                     "country_code":  "GB",
+                                                     "type":  "company",
+                                                     "lineage":  [
+                                                                     "https://openalex.org/I1290206253",
+                                                                     "https://openalex.org/I4210164937"
+                                                                 ]
+                                                 }
+                                             ],
+                            "countries":  [
+                                              "GB"
+                                          ],
+                            "is_corresponding":  false,
+                            "raw_author_name":  "Advait Sarkar",
+                            "raw_affiliation_strings":  [
+                                                            "Microsoft Research, Cambridge, United Kingdom"
+                                                        ],
+                            "raw_orcid":  "https://orcid.org/0000-0002-5401-3478",
+                            "affiliations":  [
+                                                 {
+                                                     "raw_affiliation_string":  "Microsoft Research, Cambridge, United Kingdom",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I4210164937"
+                                                                         ]
+                                                 }
+                                             ]
+                        },
+                        {
+                            "author_position":  "middle",
+                            "author":  {
+                                           "id":  "https://openalex.org/A5061320164",
+                                           "display_name":  "Lev Tankelevitch",
+                                           "orcid":  "https://orcid.org/0000-0003-1286-5194"
+                                       },
+                            "institutions":  [
+                                                 {
+                                                     "id":  "https://openalex.org/I4210164937",
+                                                     "display_name":  "Microsoft Research (United Kingdom)",
+                                                     "ror":  "https://ror.org/05k87vq12",
+                                                     "country_code":  "GB",
+                                                     "type":  "company",
+                                                     "lineage":  [
+                                                                     "https://openalex.org/I1290206253",
+                                                                     "https://openalex.org/I4210164937"
+                                                                 ]
+                                                 }
+                                             ],
+                            "countries":  [
+                                              "GB"
+                                          ],
+                            "is_corresponding":  false,
+                            "raw_author_name":  "Lev Tankelevitch",
+                            "raw_affiliation_strings":  [
+                                                            "Microsoft Research, Cambridge, United Kingdom"
+                                                        ],
+                            "raw_orcid":  "https://orcid.org/0000-0003-1286-5194",
+                            "affiliations":  [
+                                                 {
+                                                     "raw_affiliation_string":  "Microsoft Research, Cambridge, United Kingdom",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I4210164937"
+                                                                         ]
+                                                 }
+                                             ]
+                        },
+                        {
+                            "author_position":  "middle",
+                            "author":  {
+                                           "id":  "https://openalex.org/A5016826392",
+                                           "display_name":  "Ian Drosos",
+                                           "orcid":  "https://orcid.org/0000-0003-3475-2609"
+                                       },
+                            "institutions":  [
+                                                 {
+                                                     "id":  "https://openalex.org/I4210164937",
+                                                     "display_name":  "Microsoft Research (United Kingdom)",
+                                                     "ror":  "https://ror.org/05k87vq12",
+                                                     "country_code":  "GB",
+                                                     "type":  "company",
+                                                     "lineage":  [
+                                                                     "https://openalex.org/I1290206253",
+                                                                     "https://openalex.org/I4210164937"
+                                                                 ]
+                                                 }
+                                             ],
+                            "countries":  [
+                                              "GB"
+                                          ],
+                            "is_corresponding":  false,
+                            "raw_author_name":  "Ian Drosos",
+                            "raw_affiliation_strings":  [
+                                                            "Microsoft Research, Cambridge, United Kingdom"
+                                                        ],
+                            "raw_orcid":  "https://orcid.org/0000-0003-3475-2609",
+                            "affiliations":  [
+                                                 {
+                                                     "raw_affiliation_string":  "Microsoft Research, Cambridge, United Kingdom",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I4210164937"
+                                                                         ]
+                                                 }
+                                             ]
+                        },
+                        {
+                            "author_position":  "middle",
+                            "author":  {
+                                           "id":  "https://openalex.org/A5038706435",
+                                           "display_name":  "Sean Rintel",
+                                           "orcid":  "https://orcid.org/0000-0003-0840-0546"
+                                       },
+                            "institutions":  [
+                                                 {
+                                                     "id":  "https://openalex.org/I4210164937",
+                                                     "display_name":  "Microsoft Research (United Kingdom)",
+                                                     "ror":  "https://ror.org/05k87vq12",
+                                                     "country_code":  "GB",
+                                                     "type":  "company",
+                                                     "lineage":  [
+                                                                     "https://openalex.org/I1290206253",
+                                                                     "https://openalex.org/I4210164937"
+                                                                 ]
+                                                 }
+                                             ],
+                            "countries":  [
+                                              "GB"
+                                          ],
+                            "is_corresponding":  false,
+                            "raw_author_name":  "Sean Rintel",
+                            "raw_affiliation_strings":  [
+                                                            "Microsoft Research, Cambridge, United Kingdom"
+                                                        ],
+                            "raw_orcid":  "https://orcid.org/0000-0003-0840-0546",
+                            "affiliations":  [
+                                                 {
+                                                     "raw_affiliation_string":  "Microsoft Research, Cambridge, United Kingdom",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I4210164937"
+                                                                         ]
+                                                 }
+                                             ]
+                        },
+                        {
+                            "author_position":  "middle",
+                            "author":  {
+                                           "id":  "https://openalex.org/A5108601104",
+                                           "display_name":  "Richard Banks",
+                                           "orcid":  null
+                                       },
+                            "institutions":  [
+                                                 {
+                                                     "id":  "https://openalex.org/I4210164937",
+                                                     "display_name":  "Microsoft Research (United Kingdom)",
+                                                     "ror":  "https://ror.org/05k87vq12",
+                                                     "country_code":  "GB",
+                                                     "type":  "company",
+                                                     "lineage":  [
+                                                                     "https://openalex.org/I1290206253",
+                                                                     "https://openalex.org/I4210164937"
+                                                                 ]
+                                                 }
+                                             ],
+                            "countries":  [
+                                              "GB"
+                                          ],
+                            "is_corresponding":  false,
+                            "raw_author_name":  "Richard Banks",
+                            "raw_affiliation_strings":  [
+                                                            "Microsoft Research Cambridge, Cambridge, United Kingdom"
+                                                        ],
+                            "raw_orcid":  "https://orcid.org/0009-0004-5239-2701",
+                            "affiliations":  [
+                                                 {
+                                                     "raw_affiliation_string":  "Microsoft Research Cambridge, Cambridge, United Kingdom",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I4210164937"
+                                                                         ]
+                                                 }
+                                             ]
+                        },
+                        {
+                            "author_position":  "last",
+                            "author":  {
+                                           "id":  "https://openalex.org/A5110117745",
+                                           "display_name":  "Nicholas Wilson",
+                                           "orcid":  "https://orcid.org/0000-0001-8566-9720"
+                                       },
+                            "institutions":  [
+                                                 {
+                                                     "id":  "https://openalex.org/I4210164937",
+                                                     "display_name":  "Microsoft Research (United Kingdom)",
+                                                     "ror":  "https://ror.org/05k87vq12",
+                                                     "country_code":  "GB",
+                                                     "type":  "company",
+                                                     "lineage":  [
+                                                                     "https://openalex.org/I1290206253",
+                                                                     "https://openalex.org/I4210164937"
+                                                                 ]
+                                                 }
+                                             ],
+                            "countries":  [
+                                              "GB"
+                                          ],
+                            "is_corresponding":  false,
+                            "raw_author_name":  "Nicholas Wilson",
+                            "raw_affiliation_strings":  [
+                                                            "Microsoft Research, Cambridge, United Kingdom"
+                                                        ],
+                            "raw_orcid":  "https://orcid.org/0000-0001-8566-9720",
+                            "affiliations":  [
+                                                 {
+                                                     "raw_affiliation_string":  "Microsoft Research, Cambridge, United Kingdom",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I4210164937"
+                                                                         ]
+                                                 }
+                                             ]
+                        }
+                    ],
+    "biblio":  {
+                   "volume":  null,
+                   "issue":  null,
+                   "first_page":  "1",
+                   "last_page":  "22"
+               }
+}

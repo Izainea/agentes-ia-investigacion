@@ -1,0 +1,501 @@
+﻿{
+    "display_name":  "Navigating the Jagged Technological Frontier: Field Experimental Evidence of the Effects of AI on Knowledge Worker Productivity and Quality",
+    "publication_year":  2023,
+    "doi":  "https://doi.org/10.2139/ssrn.4573321",
+    "type":  "preprint",
+    "open_access":  {
+                        "is_oa":  true,
+                        "oa_status":  "green",
+                        "oa_url":  "https://doi.org/10.2139/ssrn.4573321",
+                        "any_repository_has_fulltext":  true
+                    },
+    "best_oa_location":  {
+                             "id":  "doi:10.2139/ssrn.4573321",
+                             "is_oa":  true,
+                             "landing_page_url":  "https://doi.org/10.2139/ssrn.4573321",
+                             "pdf_url":  null,
+                             "source":  {
+                                            "id":  "https://openalex.org/S4210172589",
+                                            "display_name":  "SSRN Electronic Journal",
+                                            "issn_l":  "1556-5068",
+                                            "issn":  [
+                                                         "1556-5068"
+                                                     ],
+                                            "is_oa":  true,
+                                            "is_in_doaj":  false,
+                                            "is_core":  false,
+                                            "host_organization":  "https://openalex.org/I1318003438",
+                                            "host_organization_name":  "RELX Group (Netherlands)",
+                                            "host_organization_lineage":  [
+                                                                              "https://openalex.org/I1318003438"
+                                                                          ],
+                                            "host_organization_lineage_names":  [
+
+                                                                                ],
+                                            "type":  "repository"
+                                        },
+                             "license":  null,
+                             "license_id":  null,
+                             "version":  "publishedVersion",
+                             "is_accepted":  true,
+                             "is_published":  true,
+                             "raw_source_name":  "SSRN Electronic Journal",
+                             "raw_type":  "journal-article"
+                         },
+    "primary_location":  {
+                             "id":  "doi:10.2139/ssrn.4573321",
+                             "is_oa":  true,
+                             "landing_page_url":  "https://doi.org/10.2139/ssrn.4573321",
+                             "pdf_url":  null,
+                             "source":  {
+                                            "id":  "https://openalex.org/S4210172589",
+                                            "display_name":  "SSRN Electronic Journal",
+                                            "issn_l":  "1556-5068",
+                                            "issn":  [
+                                                         "1556-5068"
+                                                     ],
+                                            "is_oa":  true,
+                                            "is_in_doaj":  false,
+                                            "is_core":  false,
+                                            "host_organization":  "https://openalex.org/I1318003438",
+                                            "host_organization_name":  "RELX Group (Netherlands)",
+                                            "host_organization_lineage":  [
+                                                                              "https://openalex.org/I1318003438"
+                                                                          ],
+                                            "host_organization_lineage_names":  [
+
+                                                                                ],
+                                            "type":  "repository"
+                                        },
+                             "license":  null,
+                             "license_id":  null,
+                             "version":  "publishedVersion",
+                             "is_accepted":  true,
+                             "is_published":  true,
+                             "raw_source_name":  "SSRN Electronic Journal",
+                             "raw_type":  "journal-article"
+                         },
+    "cited_by_count":  720,
+    "authorships":  [
+                        {
+                            "author_position":  "first",
+                            "author":  {
+                                           "id":  "https://openalex.org/A5051453071",
+                                           "display_name":  "Fabrizio Dell’Acqua",
+                                           "orcid":  null
+                                       },
+                            "institutions":  [
+                                                 {
+                                                     "id":  "https://openalex.org/I136199984",
+                                                     "display_name":  "Harvard University",
+                                                     "ror":  "https://ror.org/03vek6s52",
+                                                     "country_code":  "US",
+                                                     "type":  "education",
+                                                     "lineage":  [
+                                                                     "https://openalex.org/I136199984"
+                                                                 ]
+                                                 }
+                                             ],
+                            "countries":  [
+                                              "US"
+                                          ],
+                            "is_corresponding":  true,
+                            "raw_author_name":  "Fabrizio Dell\u0027Acqua",
+                            "raw_affiliation_strings":  [
+                                                            "Harvard Business School",
+                                                            "Harvard University - Business School (HBS)"
+                                                        ],
+                            "raw_orcid":  null,
+                            "affiliations":  [
+                                                 {
+                                                     "raw_affiliation_string":  "Harvard Business School",
+                                                     "institution_ids":  [
+
+                                                                         ]
+                                                 },
+                                                 {
+                                                     "raw_affiliation_string":  "Harvard University - Business School (HBS)",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I136199984"
+                                                                         ]
+                                                 }
+                                             ]
+                        },
+                        {
+                            "author_position":  "middle",
+                            "author":  {
+                                           "id":  "https://openalex.org/A5026872292",
+                                           "display_name":  "Edward McFowland",
+                                           "orcid":  "https://orcid.org/0000-0001-5249-7117"
+                                       },
+                            "institutions":  [
+                                                 {
+                                                     "id":  "https://openalex.org/I136199984",
+                                                     "display_name":  "Harvard University",
+                                                     "ror":  "https://ror.org/03vek6s52",
+                                                     "country_code":  "US",
+                                                     "type":  "education",
+                                                     "lineage":  [
+                                                                     "https://openalex.org/I136199984"
+                                                                 ]
+                                                 }
+                                             ],
+                            "countries":  [
+                                              "US"
+                                          ],
+                            "is_corresponding":  false,
+                            "raw_author_name":  "Edward McFowland",
+                            "raw_affiliation_strings":  [
+                                                            "Harvard University - Business School (HBS)"
+                                                        ],
+                            "raw_orcid":  null,
+                            "affiliations":  [
+                                                 {
+                                                     "raw_affiliation_string":  "Harvard University - Business School (HBS)",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I136199984"
+                                                                         ]
+                                                 }
+                                             ]
+                        },
+                        {
+                            "author_position":  "middle",
+                            "author":  {
+                                           "id":  "https://openalex.org/A5061686034",
+                                           "display_name":  "Ethan Mollick",
+                                           "orcid":  null
+                                       },
+                            "institutions":  [
+                                                 {
+                                                     "id":  "https://openalex.org/I79576946",
+                                                     "display_name":  "University of Pennsylvania",
+                                                     "ror":  "https://ror.org/00b30xv10",
+                                                     "country_code":  "US",
+                                                     "type":  "education",
+                                                     "lineage":  [
+                                                                     "https://openalex.org/I79576946"
+                                                                 ]
+                                                 }
+                                             ],
+                            "countries":  [
+                                              "US"
+                                          ],
+                            "is_corresponding":  false,
+                            "raw_author_name":  "Ethan R. Mollick",
+                            "raw_affiliation_strings":  [
+                                                            "University of Pennsylvania - Management Department",
+                                                            "University of Pennsylvania - Wharton School"
+                                                        ],
+                            "raw_orcid":  null,
+                            "affiliations":  [
+                                                 {
+                                                     "raw_affiliation_string":  "University of Pennsylvania - Management Department",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I79576946"
+                                                                         ]
+                                                 },
+                                                 {
+                                                     "raw_affiliation_string":  "University of Pennsylvania - Wharton School",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I79576946"
+                                                                         ]
+                                                 }
+                                             ]
+                        },
+                        {
+                            "author_position":  "middle",
+                            "author":  {
+                                           "id":  "https://openalex.org/A5036969088",
+                                           "display_name":  "Hila Lifshitz‐Assaf",
+                                           "orcid":  "https://orcid.org/0000-0002-3461-003X"
+                                       },
+                            "institutions":  [
+                                                 {
+                                                     "id":  "https://openalex.org/I136199984",
+                                                     "display_name":  "Harvard University",
+                                                     "ror":  "https://ror.org/03vek6s52",
+                                                     "country_code":  "US",
+                                                     "type":  "education",
+                                                     "lineage":  [
+                                                                     "https://openalex.org/I136199984"
+                                                                 ]
+                                                 },
+                                                 {
+                                                     "id":  "https://openalex.org/I39555362",
+                                                     "display_name":  "University of Warwick",
+                                                     "ror":  "https://ror.org/01a77tt86",
+                                                     "country_code":  "GB",
+                                                     "type":  "education",
+                                                     "lineage":  [
+                                                                     "https://openalex.org/I39555362"
+                                                                 ]
+                                                 },
+                                                 {
+                                                     "id":  "https://openalex.org/I4210122310",
+                                                     "display_name":  "Innovation Research Center",
+                                                     "ror":  "https://ror.org/02sdeme12",
+                                                     "country_code":  "US",
+                                                     "type":  "facility",
+                                                     "lineage":  [
+                                                                     "https://openalex.org/I4210122310"
+                                                                 ]
+                                                 }
+                                             ],
+                            "countries":  [
+                                              "GB",
+                                              "US"
+                                          ],
+                            "is_corresponding":  false,
+                            "raw_author_name":  "Hila Lifshitz-Assaf",
+                            "raw_affiliation_strings":  [
+                                                            "Harvard LISH, Lab for Innovation Sciences",
+                                                            "Harvard University Lab for Innovation Sciences",
+                                                            "University of Warwick, Warwick Business School"
+                                                        ],
+                            "raw_orcid":  null,
+                            "affiliations":  [
+                                                 {
+                                                     "raw_affiliation_string":  "Harvard LISH, Lab for Innovation Sciences",
+                                                     "institution_ids":  [
+
+                                                                         ]
+                                                 },
+                                                 {
+                                                     "raw_affiliation_string":  "Harvard University Lab for Innovation Sciences",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I136199984",
+                                                                             "https://openalex.org/I4210122310"
+                                                                         ]
+                                                 },
+                                                 {
+                                                     "raw_affiliation_string":  "University of Warwick, Warwick Business School",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I39555362"
+                                                                         ]
+                                                 }
+                                             ]
+                        },
+                        {
+                            "author_position":  "middle",
+                            "author":  {
+                                           "id":  "https://openalex.org/A5021677696",
+                                           "display_name":  "Katherine C. Kellogg",
+                                           "orcid":  "https://orcid.org/0000-0003-4372-3498"
+                                       },
+                            "institutions":  [
+                                                 {
+                                                     "id":  "https://openalex.org/I63966007",
+                                                     "display_name":  "Massachusetts Institute of Technology",
+                                                     "ror":  "https://ror.org/042nb2s44",
+                                                     "country_code":  "US",
+                                                     "type":  "education",
+                                                     "lineage":  [
+                                                                     "https://openalex.org/I63966007"
+                                                                 ]
+                                                 }
+                                             ],
+                            "countries":  [
+                                              "US"
+                                          ],
+                            "is_corresponding":  false,
+                            "raw_author_name":  "Katherine Kellogg",
+                            "raw_affiliation_strings":  [
+                                                            "Massachusetts Institute of Technology (MIT) - Sloan School of Management"
+                                                        ],
+                            "raw_orcid":  null,
+                            "affiliations":  [
+                                                 {
+                                                     "raw_affiliation_string":  "Massachusetts Institute of Technology (MIT) - Sloan School of Management",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I63966007"
+                                                                         ]
+                                                 }
+                                             ]
+                        },
+                        {
+                            "author_position":  "middle",
+                            "author":  {
+                                           "id":  "https://openalex.org/A5090507466",
+                                           "display_name":  "Saran Rajendran",
+                                           "orcid":  "https://orcid.org/0000-0003-3919-0860"
+                                       },
+                            "institutions":  [
+                                                 {
+                                                     "id":  "https://openalex.org/I4401726965",
+                                                     "display_name":  "Boston Consulting Group (United States)",
+                                                     "ror":  "https://ror.org/01526xe10",
+                                                     "country_code":  null,
+                                                     "type":  "company",
+                                                     "lineage":  [
+                                                                     "https://openalex.org/I4401726965"
+                                                                 ]
+                                                 }
+                                             ],
+                            "countries":  [
+
+                                          ],
+                            "is_corresponding":  false,
+                            "raw_author_name":  "Saran Rajendran",
+                            "raw_affiliation_strings":  [
+                                                            "Boston Consulting Group, Henderson Institute"
+                                                        ],
+                            "raw_orcid":  null,
+                            "affiliations":  [
+                                                 {
+                                                     "raw_affiliation_string":  "Boston Consulting Group, Henderson Institute",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I4401726965"
+                                                                         ]
+                                                 }
+                                             ]
+                        },
+                        {
+                            "author_position":  "middle",
+                            "author":  {
+                                           "id":  "https://openalex.org/A5074904134",
+                                           "display_name":  "Lisa Krayer",
+                                           "orcid":  "https://orcid.org/0000-0001-9133-226X"
+                                       },
+                            "institutions":  [
+                                                 {
+                                                     "id":  "https://openalex.org/I4401726965",
+                                                     "display_name":  "Boston Consulting Group (United States)",
+                                                     "ror":  "https://ror.org/01526xe10",
+                                                     "country_code":  null,
+                                                     "type":  "company",
+                                                     "lineage":  [
+                                                                     "https://openalex.org/I4401726965"
+                                                                 ]
+                                                 }
+                                             ],
+                            "countries":  [
+
+                                          ],
+                            "is_corresponding":  false,
+                            "raw_author_name":  "Lisa Krayer",
+                            "raw_affiliation_strings":  [
+                                                            "Boston Consulting Group, Henderson Institute"
+                                                        ],
+                            "raw_orcid":  null,
+                            "affiliations":  [
+                                                 {
+                                                     "raw_affiliation_string":  "Boston Consulting Group, Henderson Institute",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I4401726965"
+                                                                         ]
+                                                 }
+                                             ]
+                        },
+                        {
+                            "author_position":  "middle",
+                            "author":  {
+                                           "id":  "https://openalex.org/A5002745781",
+                                           "display_name":  "François Candelon",
+                                           "orcid":  null
+                                       },
+                            "institutions":  [
+                                                 {
+                                                     "id":  "https://openalex.org/I4401726965",
+                                                     "display_name":  "Boston Consulting Group (United States)",
+                                                     "ror":  "https://ror.org/01526xe10",
+                                                     "country_code":  null,
+                                                     "type":  "company",
+                                                     "lineage":  [
+                                                                     "https://openalex.org/I4401726965"
+                                                                 ]
+                                                 }
+                                             ],
+                            "countries":  [
+
+                                          ],
+                            "is_corresponding":  false,
+                            "raw_author_name":  "François Candelon",
+                            "raw_affiliation_strings":  [
+                                                            "Boston Consulting Group",
+                                                            "Boston Consulting Group, Henderson Institute"
+                                                        ],
+                            "raw_orcid":  null,
+                            "affiliations":  [
+                                                 {
+                                                     "raw_affiliation_string":  "Boston Consulting Group",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I4401726965"
+                                                                         ]
+                                                 },
+                                                 {
+                                                     "raw_affiliation_string":  "Boston Consulting Group, Henderson Institute",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I4401726965"
+                                                                         ]
+                                                 }
+                                             ]
+                        },
+                        {
+                            "author_position":  "last",
+                            "author":  {
+                                           "id":  "https://openalex.org/A5089560559",
+                                           "display_name":  "Karim R. Lakhani",
+                                           "orcid":  "https://orcid.org/0000-0002-5535-8304"
+                                       },
+                            "institutions":  [
+                                                 {
+                                                     "id":  "https://openalex.org/I193374721",
+                                                     "display_name":  "Internet Society",
+                                                     "ror":  "https://ror.org/04dzfqx38",
+                                                     "country_code":  "US",
+                                                     "type":  "nonprofit",
+                                                     "lineage":  [
+                                                                     "https://openalex.org/I193374721"
+                                                                 ]
+                                                 },
+                                                 {
+                                                     "id":  "https://openalex.org/I4210098931",
+                                                     "display_name":  "Quantitative BioSciences",
+                                                     "ror":  "https://ror.org/010brsj79",
+                                                     "country_code":  "US",
+                                                     "type":  "nonprofit",
+                                                     "lineage":  [
+                                                                     "https://openalex.org/I4210098931"
+                                                                 ]
+                                                 }
+                                             ],
+                            "countries":  [
+                                              "US"
+                                          ],
+                            "is_corresponding":  false,
+                            "raw_author_name":  "Karim R. Lakhani",
+                            "raw_affiliation_strings":  [
+                                                            "Harvard Business School - Technology and Operations Management Group",
+                                                            "Harvard Institute for Quantitative Social Science",
+                                                            "Harvard University - Berkman Klein Center for Internet \u0026 Society"
+                                                        ],
+                            "raw_orcid":  null,
+                            "affiliations":  [
+                                                 {
+                                                     "raw_affiliation_string":  "Harvard Business School - Technology and Operations Management Group",
+                                                     "institution_ids":  [
+
+                                                                         ]
+                                                 },
+                                                 {
+                                                     "raw_affiliation_string":  "Harvard Institute for Quantitative Social Science",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I4210098931"
+                                                                         ]
+                                                 },
+                                                 {
+                                                     "raw_affiliation_string":  "Harvard University - Berkman Klein Center for Internet \u0026 Society",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I193374721"
+                                                                         ]
+                                                 }
+                                             ]
+                        }
+                    ],
+    "biblio":  {
+                   "volume":  null,
+                   "issue":  null,
+                   "first_page":  null,
+                   "last_page":  null
+               }
+}

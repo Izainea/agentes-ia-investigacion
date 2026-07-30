@@ -1,0 +1,271 @@
+﻿{
+    "display_name":  "Your Brain on ChatGPT: Accumulation of Cognitive Debt when Using an AI Assistant for Essay Writing Task",
+    "publication_year":  2025,
+    "doi":  "https://doi.org/10.48550/arxiv.2506.08872",
+    "type":  "preprint",
+    "open_access":  {
+                        "is_oa":  true,
+                        "oa_status":  "green",
+                        "oa_url":  "https://arxiv.org/pdf/2506.08872",
+                        "any_repository_has_fulltext":  true
+                    },
+    "best_oa_location":  {
+                             "id":  "pmh:oai:arXiv.org:2506.08872",
+                             "is_oa":  true,
+                             "landing_page_url":  "http://arxiv.org/abs/2506.08872",
+                             "pdf_url":  "https://arxiv.org/pdf/2506.08872",
+                             "source":  {
+                                            "id":  "https://openalex.org/S4306400194",
+                                            "display_name":  "arXiv (Cornell University)",
+                                            "issn_l":  "2331-8422",
+                                            "issn":  [
+                                                         "2331-8422"
+                                                     ],
+                                            "is_oa":  true,
+                                            "is_in_doaj":  false,
+                                            "is_core":  false,
+                                            "host_organization":  "https://openalex.org/I205783295",
+                                            "host_organization_name":  "Cornell University",
+                                            "host_organization_lineage":  [
+                                                                              "https://openalex.org/I205783295"
+                                                                          ],
+                                            "host_organization_lineage_names":  [
+
+                                                                                ],
+                                            "type":  "repository"
+                                        },
+                             "license":  null,
+                             "license_id":  null,
+                             "version":  "submittedVersion",
+                             "is_accepted":  false,
+                             "is_published":  false,
+                             "raw_source_name":  null,
+                             "raw_type":  "text"
+                         },
+    "primary_location":  {
+                             "id":  "pmh:oai:arXiv.org:2506.08872",
+                             "is_oa":  true,
+                             "landing_page_url":  "http://arxiv.org/abs/2506.08872",
+                             "pdf_url":  "https://arxiv.org/pdf/2506.08872",
+                             "source":  {
+                                            "id":  "https://openalex.org/S4306400194",
+                                            "display_name":  "arXiv (Cornell University)",
+                                            "issn_l":  "2331-8422",
+                                            "issn":  [
+                                                         "2331-8422"
+                                                     ],
+                                            "is_oa":  true,
+                                            "is_in_doaj":  false,
+                                            "is_core":  false,
+                                            "host_organization":  "https://openalex.org/I205783295",
+                                            "host_organization_name":  "Cornell University",
+                                            "host_organization_lineage":  [
+                                                                              "https://openalex.org/I205783295"
+                                                                          ],
+                                            "host_organization_lineage_names":  [
+
+                                                                                ],
+                                            "type":  "repository"
+                                        },
+                             "license":  null,
+                             "license_id":  null,
+                             "version":  "submittedVersion",
+                             "is_accepted":  false,
+                             "is_published":  false,
+                             "raw_source_name":  null,
+                             "raw_type":  "text"
+                         },
+    "cited_by_count":  120,
+    "authorships":  [
+                        {
+                            "author_position":  "first",
+                            "author":  {
+                                           "id":  "https://openalex.org/A5068310449",
+                                           "display_name":  "Nataliya Kosmyna",
+                                           "orcid":  "https://orcid.org/0000-0003-1272-0470"
+                                       },
+                            "institutions":  [
+
+                                             ],
+                            "countries":  [
+
+                                          ],
+                            "is_corresponding":  false,
+                            "raw_author_name":  "Kosmyna, Nataliya",
+                            "raw_affiliation_strings":  [
+
+                                                        ],
+                            "raw_orcid":  null,
+                            "affiliations":  [
+
+                                             ]
+                        },
+                        {
+                            "author_position":  "middle",
+                            "author":  {
+                                           "id":  "https://openalex.org/A5055845314",
+                                           "display_name":  "Eugene Hauptmann",
+                                           "orcid":  null
+                                       },
+                            "institutions":  [
+
+                                             ],
+                            "countries":  [
+
+                                          ],
+                            "is_corresponding":  false,
+                            "raw_author_name":  "Hauptmann, Eugene",
+                            "raw_affiliation_strings":  [
+
+                                                        ],
+                            "raw_orcid":  null,
+                            "affiliations":  [
+
+                                             ]
+                        },
+                        {
+                            "author_position":  "middle",
+                            "author":  {
+                                           "id":  "https://openalex.org/A5081199756",
+                                           "display_name":  "Ye Yuan",
+                                           "orcid":  "https://orcid.org/0000-0001-5316-6002"
+                                       },
+                            "institutions":  [
+
+                                             ],
+                            "countries":  [
+
+                                          ],
+                            "is_corresponding":  false,
+                            "raw_author_name":  "Yuan, Ye Tong",
+                            "raw_affiliation_strings":  [
+
+                                                        ],
+                            "raw_orcid":  null,
+                            "affiliations":  [
+
+                                             ]
+                        },
+                        {
+                            "author_position":  "middle",
+                            "author":  {
+                                           "id":  "https://openalex.org/A5120777619",
+                                           "display_name":  "Jessica Situ",
+                                           "orcid":  null
+                                       },
+                            "institutions":  [
+
+                                             ],
+                            "countries":  [
+
+                                          ],
+                            "is_corresponding":  false,
+                            "raw_author_name":  "Situ, Jessica",
+                            "raw_affiliation_strings":  [
+
+                                                        ],
+                            "raw_orcid":  null,
+                            "affiliations":  [
+
+                                             ]
+                        },
+                        {
+                            "author_position":  "middle",
+                            "author":  {
+                                           "id":  null,
+                                           "display_name":  "Liao, Xian-Hao",
+                                           "orcid":  null
+                                       },
+                            "institutions":  [
+
+                                             ],
+                            "countries":  [
+
+                                          ],
+                            "is_corresponding":  false,
+                            "raw_author_name":  "Liao, Xian-Hao",
+                            "raw_affiliation_strings":  [
+
+                                                        ],
+                            "raw_orcid":  null,
+                            "affiliations":  [
+
+                                             ]
+                        },
+                        {
+                            "author_position":  "middle",
+                            "author":  {
+                                           "id":  "https://openalex.org/A5120777620",
+                                           "display_name":  "Ashly Vivian Beresnitzky",
+                                           "orcid":  null
+                                       },
+                            "institutions":  [
+
+                                             ],
+                            "countries":  [
+
+                                          ],
+                            "is_corresponding":  false,
+                            "raw_author_name":  "Beresnitzky, Ashly Vivian",
+                            "raw_affiliation_strings":  [
+
+                                                        ],
+                            "raw_orcid":  null,
+                            "affiliations":  [
+
+                                             ]
+                        },
+                        {
+                            "author_position":  "middle",
+                            "author":  {
+                                           "id":  "https://openalex.org/A5120777621",
+                                           "display_name":  "Iris Braunstein",
+                                           "orcid":  null
+                                       },
+                            "institutions":  [
+
+                                             ],
+                            "countries":  [
+
+                                          ],
+                            "is_corresponding":  false,
+                            "raw_author_name":  "Braunstein, Iris",
+                            "raw_affiliation_strings":  [
+
+                                                        ],
+                            "raw_orcid":  null,
+                            "affiliations":  [
+
+                                             ]
+                        },
+                        {
+                            "author_position":  "last",
+                            "author":  {
+                                           "id":  "https://openalex.org/A5081457786",
+                                           "display_name":  "Pattie Maes",
+                                           "orcid":  "https://orcid.org/0000-0002-7722-6038"
+                                       },
+                            "institutions":  [
+
+                                             ],
+                            "countries":  [
+
+                                          ],
+                            "is_corresponding":  false,
+                            "raw_author_name":  "Maes, Pattie",
+                            "raw_affiliation_strings":  [
+
+                                                        ],
+                            "raw_orcid":  null,
+                            "affiliations":  [
+
+                                             ]
+                        }
+                    ],
+    "biblio":  {
+                   "volume":  null,
+                   "issue":  null,
+                   "first_page":  null,
+                   "last_page":  null
+               }
+}

@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El uso de agentes de IA en la investigación — Tutorial guiado</title>
+<meta name="description" content="Tutorial guiado: cómo usar agentes de IA (Claude Code + VS Code) en la investigación, con métodos clásicos de metodología y reglas de uso responsable. Workshop USTA 2026.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧭</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<nav class="topnav" aria-label="Navegación principal">
+  <div class="nav-inner">
+    <a class="brand" href="#inicio">AGENTES<span>DE IA</span></a>
+    <div class="nav-links">
+      <a href="#inicio">Tutorial</a>
+      <a href="presentacion.html">Presentación</a>
+      <a href="#hazlo" class="nav-cta">Cómo replicarlo</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================================ -->
+<header class="hero" id="inicio">
+  <div class="hero-inner">
+    <p class="eyebrow">Workshop · Integración de la IA en la investigación · USTA · 30 de julio de 2026 · 6:40 p.m.</p>
+    <h1>El uso de <em>agentes de IA</em><br>en la investigación</h1>
+    <p class="hero-sub">Tutorial guiado: del titular viral al artículo publicable,<br>con método — y con el investigador al mando.</p>
+    <p class="hero-meta">Carlos Isaac Zainea Maya — Doctorado en Filosofía &nbsp;·&nbsp; Eje 1: Pedagogía y política institucional</p>
+    <div class="hero-hook">
+      <span class="hook-dot" aria-hidden="true"></span>
+      <span>Esta página fue construida con un agente de IA (Claude Code).
+      El recorrido muestra cómo — y bajo qué reglas.</span>
+    </div>
+    <div class="agenda-chips" aria-label="Agenda">
+      <span>01 El entorno</span><span>02 El caso</span><span>03 El plan y los prompts</span>
+      <span>04 Agentes y artefactos</span><span>05 Autoría</span><span>06 Resultados</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================================================ -->
+<section id="entorno">
+  <p class="eyebrow"><span class="eye-num">01</span> El entorno</p>
+  <h2>El entorno de trabajo:<br>VS&nbsp;Code + Claude&nbsp;Code</h2>
+
+  <div class="cards-3">
+    <article class="card">
+      <div class="card-ico">⌨️</div>
+      <h3>VS Code</h3>
+      <p>Editor de texto gratuito. No requiere saber programar: organiza la carpeta del
+      proyecto — plan, notas, bibliografía, borradores — en un solo lugar.</p>
+    </article>
+    <article class="card">
+      <div class="card-ico">🤖</div>
+      <h3>Claude Code</h3>
+      <p>Agente de IA integrado en VS Code (o en la terminal). Recibe instrucciones en
+      español y puede leer y escribir archivos del proyecto, buscar en la web y
+      ejecutar código.</p>
+    </article>
+    <article class="card">
+      <div class="card-ico">🧭</div>
+      <h3>¿Qué es un agente?</h3>
+      <p>Un chatbot <em>responde</em>. Un agente <strong>planifica, ejecuta tareas con
+      herramientas, verifica el resultado e itera</strong> hasta terminar — bajo las
+      reglas que se le fijen. Esa diferencia define todo el método.</p>
+    </article>
+  </div>
+
+  <div class="tip">💡 <strong>Sobre la herramienta:</strong> este tutorial y su proyecto de
+  ejemplo se construyeron con <strong>Claude Code</strong> (Anthropic); por eso es la vía
+  destacada en cada paso. El método es transferible: <strong>OpenAI Codex</strong> y
+  <strong>Google Antigravity</strong> ofrecen los mismos bloques — un agente, reglas de
+  proyecto y un editor o terminal — y sus equivalentes se indican a lo largo de la página.</div>
+
+  <div class="pasos-instalar">
+    <h3 class="h3-line">Montar el entorno (una sola vez, ~15 minutos)</h3>
+    <div class="dl-grid">
+      <article class="dl-card">
+        <div class="dl-head"><span class="dl-ico">⌨️</span>
+          <div><b>Paso A — Instalar VS Code</b><small>gratuito · Windows, macOS o Linux · ~5 min</small></div>
+        </div>
+        <ol class="dl-steps">
+          <li>Entrar a la página oficial de descargas y elegir el sistema operativo.</li>
+          <li>Ejecutar el instalador y aceptar las opciones por defecto.</li>
+          <li>Abrir VS Code. <span class="dl-opt">Opcional:</span> en el panel de extensiones
+              (<code>Ctrl+Shift+X</code>) instalar <em>"Spanish Language Pack"</em> para la interfaz en español.</li>
+        </ol>
+        <div class="dl-links">
+          <a class="dl-btn" href="https://code.visualstudio.com/download" target="_blank" rel="noopener">⬇ Descargar VS Code</a>
+          <a class="dl-link" href="https://code.visualstudio.com" target="_blank" rel="noopener">code.visualstudio.com</a>
+        </div>
+      </article>
+
+      <article class="dl-card">
+        <div class="dl-head"><span class="dl-ico">🤖</span>
+          <div><b>Paso B — Instalar Claude Code</b><small>de Anthropic · ~10 min</small></div>
+        </div>
+        <ol class="dl-steps">
+          <li>Crear una cuenta de Claude (o iniciar sesión) en
+              <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a>.
+              <span class="dl-opt">Nota:</span> Claude Code requiere un plan de pago (Pro/Max) o créditos de API.</li>
+          <li>En VS Code, abrir extensiones (<code>Ctrl+Shift+X</code>), buscar
+              <em>"Claude Code"</em> (editor: Anthropic) e instalarla.</li>
+          <li>Hacer clic en el ícono de Claude en la barra lateral → <em>Iniciar sesión</em>:
+              el navegador se abre y autoriza la cuenta.</li>
+        </ol>
+        <div class="dl-links">
+          <a class="dl-btn" href="https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code" target="_blank" rel="noopener">⬇ Extensión para VS Code</a>
+          <a class="dl-link" href="https://claude.com/claude-code" target="_blank" rel="noopener">claude.com/claude-code</a>
+          <a class="dl-link" href="https://docs.claude.com/en/docs/claude-code/quickstart" target="_blank" rel="noopener">guía de inicio ↗</a>
+        </div>
+        <details class="dl-alt">
+          <summary>Alternativa: instalación por terminal (CLI)</summary>
+          <p class="mini">Windows (PowerShell):</p>
+          <pre>irm https://claude.ai/install.ps1 | iex</pre>
+          <p class="mini">macOS / Linux:</p>
+          <pre>curl -fsSL https://claude.ai/install.sh | bash</pre>
+          <p class="mini">Después, en la terminal, entrar a la carpeta del proyecto y escribir
+          <code>claude</code> para iniciar sesión.</p>
+        </details>
+        <details class="dl-alt">
+          <summary>Alternativas: OpenAI Codex · Google Antigravity</summary>
+          <p class="mini"><strong>OpenAI Codex</strong> — extensión para VS Code, CLI y versión
+          en la nube. Requiere cuenta de ChatGPT (Plus/Pro) o créditos de API.
+          <a href="https://openai.com/codex" target="_blank" rel="noopener">openai.com/codex</a> ·
+          <a href="https://developers.openai.com/codex" target="_blank" rel="noopener">documentación ↗</a></p>
+          <p class="mini"><strong>Google Antigravity</strong> — IDE agéntico de Google (Gemini 3):
+          editor completo con un Gestor de Agentes que ejecuta varios en paralelo. Vista previa
+          gratuita con cuenta de Google.
+          <a href="https://antigravity.google" target="_blank" rel="noopener">antigravity.google</a></p>
+          <p class="mini">Los pasos del tutorial funcionan igual en las tres herramientas:
+          instalar → iniciar sesión → abrir la carpeta del proyecto. Este ejercicio se hizo
+          con Claude Code; por eso es la vía resaltada.</p>
+        </details>
+      </article>
+    </div>
+
+    <article class="dl-card dl-full">
+      <div class="dl-head"><span class="dl-ico">🗂️</span>
+        <div><b>Paso C — Crear la carpeta con esta estructura</b><small>Archivo → Abrir carpeta · la estructura se le pide al agente · ~3 min</small></div>
+      </div>
+      <p>Crear una carpeta para la investigación y abrirla en VS Code (<em>Archivo → Abrir
+      carpeta</em>). Antes del primer prompt "de investigación", conviene definir cómo se
+      organiza el proyecto. Esta estructura — la misma del caso de este tutorial — permite que
+      cualquier lector (un jurado, un par evaluador, un director) reconstruya qué se hizo y de
+      dónde salió cada cosa:</p>
+      <div class="split">
+        <pre class="tree">mi-investigacion/
+├── CLAUDE.md            ← el arnés: reglas que el agente lee siempre
+├── plan.md              ← pregunta, hipótesis, etapas, criterios
+├── prompts/             ← registro de prompts (memoria metodológica)
+├── datos/               ← resultados de búsquedas, con fecha
+├── bibliografia/
+│   ├── matriz_q.csv     ← qué responde cada fuente a cada pregunta
+│   ├── metadatos/       ← ficha JSON por artículo (OpenAlex)
+│   └── pdf/             ← solo PDFs cuya licencia permite descarga
+├── artefactos/          ← SVG, HTML, JS — cada uno con su prompt
+└── articulo/            ← borradores [BORRADOR-IA] y versión firmada</pre>
+        <ul class="rec-list">
+          <li><b>La estructura es el método.</b> Separa lo que se piensa (<code>plan.md</code>),
+          lo que se encuentra (<code>datos/</code>, <code>bibliografia/</code>), lo que se
+          produce (<code>artefactos/</code>, <code>articulo/</code>) y cómo se hizo
+          (<code>prompts/</code>).</li>
+          <li><b>Cada carpeta responde una pregunta del evaluador.</b> ¿De dónde salió este
+          dato? ¿Con qué búsqueda? ¿Qué prompt produjo este diagrama?</li>
+          <li><b><code>CLAUDE.md</code> es la primera piedra.</b> El agente lo lee al iniciar
+          cada sesión: contiene las reglas innegociables del proyecto. Equivalentes:
+          <code>AGENTS.md</code> en Codex (estándar abierto) y <code>GEMINI.md</code> /
+          <code>AGENTS.md</code> en Antigravity.</li>
+          <li><b>Git como memoria</b> (opcional): cada cambio queda en la historia del
+          repositorio.</li>
+        </ul>
+      </div>
+      <p><strong>El primer prompt del proyecto: pedir la estructura.</strong></p>
+      <div class="prompt-block">
+        <pre>Crea en esta carpeta la estructura de un proyecto de investigación
+con buenas prácticas: CLAUDE.md (las reglas del proyecto), plan.md,
+y las carpetas prompts/, datos/, bibliografia/ (con metadatos/ y
+pdf/), artefactos/ y articulo/. Escribe en cada carpeta un README.md
+de una línea que explique qué guarda y qué NO debe guardarse ahí.
+Muéstrame el árbol completo antes de crear nada.</pre>
+        <button class="copy-btn" data-copy>⧉ Copiar</button>
+      </div>
+      <div class="arnes">🪢 <strong>Arnés desde el inicio:</strong> "muéstrame antes de crear" —
+      todo cambio estructural se aprueba primero. Esta es la estructura del proyecto de
+      ejemplo de este repositorio (se revisa completa en la sección 06).</div>
+    </article>
+
+    <ol class="steps-line letters">
+      <li data-n="D"><strong>Paso D — Empezar a investigar.</strong> Con el entorno y la
+      estructura listos, el flujo de la <a href="#plan">sección 03</a> recorre el método,
+      el prompt y el arnés de cada etapa.</li>
+    </ol>
+  </div>
+
+  <h3 class="h3-line">¿Qué tan "agente" es la herramienta? <span class="mini">la agencia es un espectro, no un interruptor</span></h3>
+  <p>Los chatbots actuales ya ejecutan tareas agénticas: buscan en la web, hacen cálculos,
+  leen documentos. La diferencia entre "chatbot" y "agente" no es un interruptor de encendido
+  y apagado, sino una <strong>escalera</strong>: en cada peldaño la herramienta hace más por
+  su cuenta — más <strong>iniciativa</strong>, más <strong>herramientas</strong>,
+  <strong>verificación</strong> propia y un <strong>entorno</strong> más amplio
+  (los archivos del proyecto).</p>
+
+  <div class="esc-grid">
+    <div class="esc"><span class="esc-n">1</span><b>Modelo que responde</b>
+      <p>Texto entra, texto sale. Sin herramientas ni memoria del proyecto. Toda la
+      iniciativa es del usuario, turno a turno.</p>
+      <small>los primeros chatbots (2020–2022)</small></div>
+    <div class="esc"><span class="esc-n">2</span><b>Chatbot con herramientas</b>
+      <p>Ejecuta tareas agénticas <em>puntuales</em> a pedido: busca en la web, corre un
+      cálculo, lee un documento. Un paso a la vez.</p>
+      <small>ChatGPT, Claude, Gemini (hoy)</small></div>
+    <div class="esc"><span class="esc-n">3</span><b>Agente</b>
+      <p>Encadena pasos hacia una <em>meta</em>: planifica, elige qué herramienta usar y
+      cuándo, verifica el resultado e itera sin que se le dicte cada paso.</p>
+      <small>Claude Code · Codex · Antigravity · Copilot</small></div>
+    <div class="esc gold"><span class="esc-n">4</span><b>Agente con entorno y reglas</b>
+      <p>Trabaja además <em>sobre el proyecto</em> — lee y escribe sus archivos — y bajo
+      <em>reglas persistentes</em>. Cada acción queda registrada.</p>
+      <small>Claude Code + CLAUDE.md — el caso de este tutorial</small></div>
+  </div>
+
+  <div class="tip">💡 <strong>En palabras simples:</strong> aquí "agencia" significa una sola
+  cosa — <strong>cuántos pasos puede dar la herramienta por su cuenta</strong>. Un chatbot da
+  un paso y espera; un agente encadena varios hacia una meta. Y suba lo que suba en la
+  escalera, <strong>las decisiones importantes y la responsabilidad por el resultado siguen
+  siendo del investigador</strong>. La pregunta práctica: <em>¿cuántos pasos se le delegan,
+  y con qué reglas?</em> — para eso existe el arnés.</div>
+
+  <h3 class="h3-line">El ciclo del agente <span class="mini">(clic en cada etapa)</span></h3>
+  <p>Este ciclo separa los peldaños 3 y 4 del resto: un chatbot responde y espera la
+  siguiente instrucción; un agente recorre
+  <strong>planificar → ejecutar → verificar → iterar</strong> hasta cumplir la meta asignada.
+  En cada etapa, el investigador tiene un papel definido:</p>
+  <div class="ciclo" id="ciclo" role="tablist" aria-label="Etapas del ciclo del agente">
+    <button class="ciclo-btn is-active" data-etapa="0">🗺️ Planificar</button>
+    <button class="ciclo-btn" data-etapa="1">⚙️ Ejecutar</button>
+    <button class="ciclo-btn" data-etapa="2">✅ Verificar</button>
+    <button class="ciclo-btn" data-etapa="3">🔁 Iterar</button>
+  </div>
+  <div class="ciclo-panel" id="ciclo-panel">
+    <p><strong>Planificar.</strong> El agente descompone la instrucción en pasos: "para buscar
+    literatura se necesita la pregunta, luego la ecuación, luego ejecutarla, luego registrar
+    los conteos". En Claude Code — la herramienta de este tutorial — puede exigirse ver el
+    plan antes de que toque un archivo; Codex y Antigravity tienen modos equivalentes.</p>
+    <p class="ciclo-rol">👤 <strong>Papel del investigador:</strong> corregir el plan — quitar
+    pasos, añadir criterios, acotar el alcance. Corregir un plan cuesta menos que corregir un
+    resultado.</p>
+  </div>
+
+  <h3 class="h3-line">Una sesión de trabajo <span class="badge-sim">RECREACIÓN</span></h3>
+  <div class="terminal" id="terminal">
+    <div class="term-bar">
+      <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+      <span class="term-title">Claude Code — proyecto: carga-cognitiva-ia</span>
+      <button class="term-play" id="term-play">▶ Reproducir</button>
+    </div>
+    <div class="term-body" id="term-body" aria-live="polite"></div>
+  </div>
+  <div class="tip">💡 La recreación resume una sesión real. El proyecto completo —
+  <code>plan.md</code>, <code>CLAUDE.md</code>, <code>bibliografia/</code>,
+  <code>datos/</code> — está en el repositorio, disponible para explorarlo con calma.</div>
+</section>
+
+<!-- ============================================================ -->
+<section id="caso" class="section-dark">
+  <div class="sec-inner">
+  <p class="eyebrow gold"><span class="eye-num">02</span> El caso</p>
+  <h2>Del titular viral<br>a una pregunta de investigación</h2>
+
+  <div class="split">
+    <div>
+      <blockquote class="claim">
+        «La IA <strong>ROMPE</strong> a los trabajadores que <strong>MEJOR</strong> la usan»
+        <cite>— Xavier Mitjana, YouTube, abril de 2026 ·
+        <a href="https://www.youtube.com/watch?v=fTj4RkCVBXw" target="_blank" rel="noopener">ver en YouTube ↗</a></cite>
+      </blockquote>
+      <div class="video-embed" id="video-caso" role="button" tabindex="0"
+           aria-label="Reproducir el video: La IA ROMPE a los TRABAJADORES que MEJOR la usan">
+        <img src="https://i.ytimg.com/vi/fTj4RkCVBXw/maxresdefault.jpg"
+             alt="Miniatura del video de Xavier Mitjana"
+             loading="lazy"
+             onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/fTj4RkCVBXw/hqdefault.jpg'">
+        <span class="video-play" aria-hidden="true">▶</span>
+      </div>
+      <p>Un titular provocador. En investigación, las afirmaciones provocadoras no se
+      comparten ni se refutan por reflejo: <strong>se convierten en preguntas</strong>.
+      Ese es el ejercicio completo de este tutorial: del titular al artículo.</p>
+      <div class="tip tip-dark">💡 <strong>Antes de seguir:</strong> ¿se comparte la intuición
+      del titular? Anotar la respuesta — y volver a hacerse la pregunta al final del recorrido.</div>
+    </div>
+    <div class="preg-card">
+      <h3>De titular a pregunta de investigación</h3>
+      <p class="preg-central">¿En qué medida el uso intensivo de asistentes de IA afecta la
+      <strong>carga cognitiva</strong>, la <strong>memoria</strong> y el
+      <strong>pensamiento crítico</strong> de sus usuarios más frecuentes?</p>
+      <ul class="q-list">
+        <li><strong>Q1</strong> ¿Delegar en la IA reduce el esfuerzo cognitivo invertido (descarga cognitiva)?</li>
+        <li><strong>Q2</strong> ¿Qué efectos se han medido sobre memoria y pensamiento crítico?</li>
+        <li><strong>Q3</strong> ¿Quiénes son más vulnerables y bajo qué condiciones de uso?</li>
+      </ul>
+      <p class="hipo"><strong>H1:</strong> la IA usada como <em>sustituto</em> del esfuerzo se asocia
+      con menor retención y evaluación crítica. <strong>H0:</strong> no hay asociación medible.</p>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section id="plan">
+  <p class="eyebrow"><span class="eye-num">03</span> El plan y los prompts</p>
+  <h2>Primero el plan,<br>luego los prompts</h2>
+  <p class="lead">Todo proyecto de investigación recorre la misma ruta: identificar un
+  problema, convertirlo en una pregunta precisa, anticipar una hipótesis y fijar un objetivo.
+  Con agentes, <strong>la ruta no cambia: cambia la velocidad</strong>. El agente sigue el
+  plan del investigador — nunca al revés.</p>
+
+  <div class="ruta-grid" aria-label="Ruta completa del proyecto de investigación">
+    <button class="ruta-card" data-modal="m1"><span class="rn">1</span><b>Problema</b><span class="rd">qué ocurre</span></button>
+    <button class="ruta-card" data-modal="m2"><span class="rn">2</span><b>Pregunta e hipótesis</b><span class="rd">qué se quiere saber</span></button>
+    <button class="ruta-card" data-modal="m3"><span class="rn">3</span><b>Objetivos</b><span class="rd">qué se va a hacer</span></button>
+    <button class="ruta-card" data-modal="m4"><span class="rn">4</span><b>Literatura</b><span class="rd">qué se sabe ya</span></button>
+    <button class="ruta-card" data-modal="m5"><span class="rn">5</span><b>Metodología</b><span class="rd">cómo se hará</span></button>
+    <button class="ruta-card" data-modal="m6"><span class="rn">6</span><b>Datos y análisis</b><span class="rd">qué muestran</span></button>
+    <button class="ruta-card" data-modal="m7"><span class="rn">7</span><b>Resultados</b><span class="rd">qué significan</span></button>
+    <button class="ruta-card" data-modal="m8"><span class="rn">8</span><b>Comunicación</b><span class="rd">cómo se cuenta</span></button>
+  </div>
+  <p class="mini ruta-hint">Clic en cada etapa: método, prompts sugeridos y arnés.</p>
+
+  <h3 class="h3-line">Cómo pedirle al agente: las 6 piezas de un prompt</h3>
+  <p>Un prompt de investigación no es una pregunta suelta: es una instrucción con seis piezas.
+  La cuarta — el <strong>arnés</strong> — es la que evita los problemas típicos: referencias
+  inventadas, resultados sin registro, pasos sin verificación.</p>
+  <div class="piezas">
+    <span class="pieza"><b>1 Rol</b> quién debe ser la IA</span>
+    <span class="pieza"><b>2 Contexto</b> qué debe leer o saber antes</span>
+    <span class="pieza"><b>3 Tarea</b> qué debe producir, en concreto</span>
+    <span class="pieza gold"><b>4 Arnés</b> qué tiene prohibido hacer</span>
+    <span class="pieza"><b>5 Formato</b> cómo debe entregarlo</span>
+    <span class="pieza"><b>6 Verificación</b> cómo se sabrá que está bien</span>
+  </div>
+
+  <div class="split">
+    <div class="prompt-ej debil">
+      <h4>✗ Prompt débil</h4>
+      <pre>Búscame artículos sobre IA y cognición
+y hazme un resumen.</pre>
+      <p class="mini">Sin criterios, sin arnés, sin registro. El resultado: una lista imposible
+      de auditar y, tarde o temprano, una referencia inventada.</p>
+    </div>
+    <div class="prompt-ej fuerte">
+      <h4>✓ Prompt fuerte</h4>
+      <pre>Actúa como asistente de revisión sistemática. [ROL]
+Lee plan.md: ahí están mis preguntas Q1–Q3. [CONTEXTO]
+Construye la ecuación de búsqueda y ejecútala
+en OpenAlex; lista los 15 más citados con su
+URL de acceso explícita. [TAREA]
+No inventes referencias: solo resultados con DOI;
+si algo no aparece, dilo. [ARNÉS]
+Guarda el JSON en datos/ y dame una tabla:
+título, año, DOI, URL, citas. [FORMATO]
+Registra la ecuación exacta y los conteos
+por etapa para el PRISMA. [VERIFICACIÓN]</pre>
+    </div>
+  </div>
+
+  <h3 class="h3-line">Armar un prompt propio <span class="mini">(marcar las piezas y copiarlo)</span></h3>
+  <div class="builder" id="builder">
+    <div class="builder-checks">
+      <label><input type="checkbox" data-piece="rol" checked> Rol</label>
+      <label><input type="checkbox" data-piece="contexto" checked> Contexto</label>
+      <label><input type="checkbox" data-piece="tarea" checked> Tarea</label>
+      <label><input type="checkbox" data-piece="arnes" checked> Arnés</label>
+      <label><input type="checkbox" data-piece="formato"> Formato</label>
+      <label><input type="checkbox" data-piece="verificacion"> Verificación</label>
+    </div>
+    <pre class="builder-out" id="builder-out"></pre>
+    <button class="copy-btn" id="builder-copy">⧉ Copiar prompt</button>
+  </div>
+
+  <div class="modal-back hidden" id="m1" role="dialog" aria-modal="true" aria-labelledby="m1t">
+   <div class="modal"><button class="modal-close" aria-label="Cerrar">✕</button>
+    <p class="eyebrow modal-eye">Etapa 1 · El problema</p>
+    <h4 id="m1t">Definir qué ocurre — y por qué importa</h4>
+    <p><strong>El método:</strong> para llegar a la raíz de un problema existen tres técnicas
+    clásicas:</p>
+    <div class="m-cards">
+      <div class="m-card"><div class="m-head">❓ 5 Porqués</div><p>Método interrogativo para llegar a la <strong>causa raíz</strong>.</p></div>
+      <div class="m-card"><div class="m-head">🌳 Árbol de Problemas</div><p>Representación gráfica de <strong>causas y efectos</strong>.</p></div>
+      <div class="m-card"><div class="m-head">⚖️ Campo de Fuerzas</div><p>Fuerzas <strong>impulsoras vs. restrictivas</strong> del problema.</p></div>
+    </div>
+    <p><strong>Objetivo del paso:</strong> llegar a la causa raíz sin que la IA invente el
+    problema. El problema debe ser genuino: del investigador.</p>
+    <div class="prompt-block">
+      <pre>Actúa como tutor metodológico. Vamos a aplicar la técnica de los
+5 porqués al tema "el uso intensivo de IA y la carga cognitiva de
+sus usuarios". Tu papel es SOLO hacer las preguntas, una a la vez,
+y pedirme evidencia de cada respuesta. No respondas por mí.
+Al final, resume MI cadena causal en un árbol de problemas
+(causas → problema central → efectos) y señala en qué eslabones
+me falta evidencia.</pre>
+      <button class="copy-btn" data-copy>⧉ Copiar</button>
+    </div>
+    <div class="arnes">🪢 <strong>Arnés:</strong> la IA pregunta, el investigador responde.
+    Si el agente propone el problema, está eligiendo la investigación por él.</div>
+    <div class="tip">💡 <strong>Tip:</strong> exigir evidencia (cifras, fuentes) en cada
+    eslabón causal. Un problema sin datos es todavía una opinión.</div>
+    <p class="artefacto">📄 <strong>Artefacto:</strong> sección "problema" de <code>plan.md</code> (5 porqués + árbol).</p>
+   </div>
+  </div>
+
+  <div class="modal-back hidden" id="m2" role="dialog" aria-modal="true" aria-labelledby="m2t">
+   <div class="modal"><button class="modal-close" aria-label="Cerrar">✕</button>
+    <p class="eyebrow modal-eye">Etapa 2 · Pregunta e hipótesis</p>
+    <h4 id="m2t">Una pregunta precisa, hipótesis contrastables</h4>
+    <p><strong>El método:</strong> tres pruebas clásicas para evaluar una pregunta de
+    investigación. Debe pasar <strong>las tres</strong>:</p>
+    <div class="m-cards">
+      <div class="m-card"><div class="m-head">✔ FINER <em>pertinencia</em></div><p><strong>F</strong>actible · <strong>I</strong>nteresante · <strong>N</strong>ovedosa · <strong>É</strong>tica · <strong>R</strong>elevante</p></div>
+      <div class="m-card"><div class="m-head">⚙ PICO <em>estructura</em></div><p><strong>P</strong>oblación · <strong>I</strong>ntervención · <strong>C</strong>omparación · <strong>O</strong>utcome (resultado)</p></div>
+      <div class="m-card"><div class="m-head">↔ Causal-propositiva <em>relación</em></div><p>"¿Cómo <strong>[X]</strong> afecta <strong>[Y]</strong> en <strong>[población]</strong> durante <strong>[tiempo]</strong>?"</p></div>
+    </div>
+    <div class="prompt-block">
+      <pre>Aquí está mi borrador de pregunta: "¿Cómo afecta la IA la carga
+cognitiva de sus usuarios más acérrimos?". Evalúala contra tres
+pruebas: FINER (¿es factible, interesante, novedosa, ética,
+relevante?), PICO (¿tiene población, intervención, comparación y
+outcome?) y causal-propositiva (¿conecta X con Y en una población
+y un tiempo?). Propón 3 reformulaciones que pasen LAS TRES pruebas,
+y dime qué pierde y qué gana cada una.
+No elijas por mí: yo decido.</pre>
+      <button class="copy-btn" data-copy>⧉ Copiar</button>
+    </div>
+    <p><strong>Segundo prompt — las hipótesis:</strong></p>
+    <div class="prompt-block">
+      <pre>Con la pregunta elegida, formula H0 y H1 con una métrica observable
+y di qué evidencia permitiría contrastarlas. Señala también qué
+diseño NO serviría para responderlas, y por qué.</pre>
+      <button class="copy-btn" data-copy>⧉ Copiar</button>
+    </div>
+    <div class="arnes">🪢 <strong>Arnés:</strong> la IA critica y propone; la decisión queda
+    registrada como del investigador. La hipótesis nace del análisis, no del prompt.</div>
+    <div class="tip">💡 <strong>Tip:</strong> una pregunta que no nombra población ni contexto
+    todavía no es una pregunta de investigación.</div>
+    <p class="artefacto">📄 <strong>Artefacto:</strong> pregunta central + Q1–Qn + H0/H1 en <code>plan.md</code>.</p>
+   </div>
+  </div>
+
+  <div class="modal-back hidden" id="m3" role="dialog" aria-modal="true" aria-labelledby="m3t">
+   <div class="modal"><button class="modal-close" aria-label="Cerrar">✕</button>
+    <p class="eyebrow modal-eye">Etapa 3 · Objetivos</p>
+    <h4 id="m3t">Del interrogativo al declarativo</h4>
+    <p><strong>El método:</strong> el objetivo traduce la pregunta en acción.
+    Regla práctica: si la pregunta dice <em>"¿en qué medida…?"</em>, el objetivo dice
+    <em>"determinar en qué medida…"</em>.</p>
+    <div class="smart">
+      <div class="smart-head">El objetivo general debe ser <b>SMART</b></div>
+      <div class="smart-grid">
+        <span><b>S</b> Específico</span><span><b>M</b> Medible</span><span><b>A</b> Alcanzable</span><span><b>R</b> Relevante</span><span><b>T</b> Temporal</span>
+      </div>
+      <p class="smart-est"><strong>Estructura recomendada:</strong> verbo en infinitivo + qué + cómo + para qué + dónde/cuándo.</p>
+    </div>
+    <div class="prompt-block">
+      <pre>Convierte mi pregunta central (léela en plan.md) en un objetivo
+general SMART y en 3 objetivos específicos que lo agoten.
+Verifica la coherencia: cada específico debe responder a una
+pregunta auxiliar; si alguno no responde a ninguna, dilo.</pre>
+      <button class="copy-btn" data-copy>⧉ Copiar</button>
+    </div>
+    <div class="arnes">🪢 <strong>Arnés:</strong> ningún objetivo sin pregunta que lo respalde;
+    ninguna pregunta sin objetivo que la atienda.</div>
+    <div class="tip">💡 <strong>Tip:</strong> preferir verbos medibles (comparar, clasificar,
+    medir, contrastar) sobre verbos difusos (conocer, comprender, reflexionar).</div>
+    <p class="artefacto">📄 <strong>Artefacto:</strong> objetivo general + específicos en <code>plan.md</code>.</p>
+   </div>
+  </div>
+
+  <div class="modal-back hidden" id="m4" role="dialog" aria-modal="true" aria-labelledby="m4t">
+   <div class="modal"><button class="modal-close" aria-label="Cerrar">✕</button>
+    <p class="eyebrow modal-eye">Etapa 4 · Literatura</p>
+    <h4 id="m4t">Qué se sabe ya: búsqueda replicable y lectura con propósito</h4>
+    <p><strong>El método:</strong> las ecuaciones de búsqueda se construyen en 5 pasos y son
+    <strong>replicables</strong>: quien ejecute la misma ecuación debe obtener resultados
+    similares.</p>
+    <div class="eq-steps" role="img" aria-label="Cinco pasos: pregunta, PICO, sinónimos, booleanos, ejecución">
+      <div><b>1</b><span>Pregunta</span></div><i>→</i>
+      <div><b>2</b><span>PICO</span></div><i>→</i>
+      <div><b>3</b><span>Sinónimos</span></div><i>→</i>
+      <div><b>4</b><span>Booleanos</span></div><i>→</i>
+      <div><b>5</b><span>Ejecución</span></div>
+    </div>
+    <p class="ops"><strong>AND</strong> intersecta conceptos · <strong>OR</strong> une sinónimos ·
+    <strong>NOT</strong> excluye · <strong>"frase exacta"</strong> con comillas ·
+    <strong>truncamiento</strong> con asterisco (<code>predic*</code>)</p>
+    <details class="ej-seminario">
+      <summary>Ejemplo resuelto (deserción universitaria / XGBoost)</summary>
+      <table class="pico-table">
+        <tr><th>Componente</th><th>Términos y sinónimos</th></tr>
+        <tr><td><b>P</b> Población</td><td>"undergraduate students" OR "college students"</td></tr>
+        <tr><td><b>I</b> Intervención</td><td>"gradient boosting" OR "XGBoost" OR "ensemble methods"</td></tr>
+        <tr><td><b>C</b> Comparación</td><td>"logistic regression"</td></tr>
+        <tr><td><b>O</b> Outcome</td><td>"student dropout" OR "attrition" OR "retention"</td></tr>
+      </table>
+      <pre class="eq-final">("undergraduate students" OR "college students") AND ("gradient boosting" OR "XGBoost")
+AND "logistic regression" AND ("student dropout" OR "attrition")</pre>
+    </details>
+    <div class="prompt-block">
+      <pre>A partir de mis preguntas Q1–Q3 (léelas en plan.md), aplica los
+5 pasos: extrae los conceptos clave con PICO,
+expande sinónimos en inglés ("cognitive offloading", "cognitive
+debt", "generative AI", "large language models") y arma la
+ecuación booleana. Ejecútala contra la API de OpenAlex, guarda el
+JSON en datos/busqueda_2026-07-30_openalex.json y registra:
+ecuación exacta, total identificado, filtros y total tras filtros.
+NO selecciones todavía: lista los 15 más citados con título, año,
+DOI, conteo de citas y — explícitamente — la URL de acceso de
+cada uno (y la URL del PDF si es de acceso abierto).</pre>
+      <button class="copy-btn" data-copy>⧉ Copiar</button>
+    </div>
+    <div class="arnes">🪢 <strong>Arnés:</strong> conteos por etapa (insumo del PRISMA) y URL
+    explícita por resultado. La <em>selección</em> de artículos la hace el investigador.</div>
+    <p><strong>Segunda parte — la Matriz Q:</strong> extraer de cada artículo <em>qué responde
+    a cada pregunta</em> — con cita textual localizable y URL de acceso — y qué vacío deja.</p>
+    <div class="prompt-block">
+      <pre>De los artículos que seleccioné (marcados en datos/seleccion.md),
+llena bibliografia/matriz_q.csv con estas columnas: referencia APA,
+año, DOI, URL de acceso explícita, base y ecuación de origen, qué
+responde a Q1, a Q2 y a Q3 (con cita textual y sección), y qué
+vacío deja. Descarga a bibliografia/pdf/ los PDF de acceso abierto
+cuya licencia lo permita y guarda los metadatos de TODOS en
+bibliografia/metadatos/. Si un editor bloquea la descarga
+automatizada o el artículo es de pago, NO evadas el bloqueo:
+registra la URL en descargas.md para mi descarga manual.
+Regla dura: si un artículo no dice nada sobre una pregunta,
+escribe "no aborda" — no extrapoles. Marca cada fila como
+PENDIENTE-VALIDAR hasta que yo la revise.</pre>
+      <button class="copy-btn" data-copy>⧉ Copiar</button>
+    </div>
+    <div class="arnes">🪢 <strong>Arnés:</strong> DOI verificado y URL explícita por fuente;
+    conteos por etapa (PRISMA); descargas solo con licencia; "no aborda" en vez de relleno
+    plausible. La selección la hace el investigador.</div>
+    <div class="tip">💡 <strong>Tip:</strong> registrar los conteos de cada búsqueda desde el
+    primer día: el diagrama PRISMA se arma solo.</div>
+    <p class="artefacto">📄 <strong>Artefacto:</strong> <code>datos/busqueda_*.json</code> ·
+    <code>bibliografia/matriz_q.csv</code> · <code>pdf/</code> · <code>metadatos/</code> —
+    versión interactiva en la <a href="#agentes">sección 04 ↓</a></p>
+   </div>
+  </div>
+
+  <div class="modal-back hidden" id="m5" role="dialog" aria-modal="true" aria-labelledby="m5t">
+   <div class="modal"><button class="modal-close" aria-label="Cerrar">✕</button>
+    <p class="eyebrow modal-eye">Etapa 5 · Metodología</p>
+    <h4 id="m5t">Cómo se responderá la pregunta</h4>
+    <p><strong>El método:</strong> un diseño metodológico completo declara cinco decisiones:</p>
+    <ul class="rec-list">
+      <li><b>Enfoque</b> — cualitativo, cuantitativo o mixto, según la pregunta.</li>
+      <li><b>Diseño y alcance</b> — exploratorio, descriptivo, correlacional, experimental…</li>
+      <li><b>Población, muestra o corpus</b> — quiénes o qué, y por qué.</li>
+      <li><b>Técnicas e instrumentos</b> — entrevistas, encuestas, análisis documental, mediciones.</li>
+      <li><b>Consideraciones éticas</b> — consentimientos, anonimización, manejo de datos.</li>
+    </ul>
+    <div class="prompt-block">
+      <pre>Lee plan.md y bibliografia/matriz_q.csv. Propón DOS diseños
+metodológicos viables para responder Q1–Q3: uno cualitativo y uno
+mixto. Para cada uno: población o corpus, instrumentos,
+procedimiento y limitaciones. Preséntalos en una tabla comparativa
+de ventajas y riesgos. No elijas por mí.</pre>
+      <button class="copy-btn" data-copy>⧉ Copiar</button>
+    </div>
+    <div class="arnes">🪢 <strong>Arnés:</strong> la IA compara opciones; el diseño lo decide y
+    lo justifica el investigador. Consentimientos y datos personales no se delegan.</div>
+    <div class="tip">💡 <strong>Tip:</strong> el diseño se defiende con la coherencia
+    pregunta ↔ objetivo ↔ método. Si un método no responde a ningún objetivo, sobra.</div>
+    <p class="artefacto">📄 <strong>Artefacto:</strong> sección "metodología" de <code>plan.md</code>.</p>
+   </div>
+  </div>
+
+  <div class="modal-back hidden" id="m6" role="dialog" aria-modal="true" aria-labelledby="m6t">
+   <div class="modal"><button class="modal-close" aria-label="Cerrar">✕</button>
+    <p class="eyebrow modal-eye">Etapa 6 · Datos y análisis</p>
+    <h4 id="m6t">Recolectar y analizar, dejando rastro</h4>
+    <p><strong>El método:</strong> los datos crudos se conservan intactos; todo procesamiento
+    ocurre por scripts guardados en el proyecto, de modo que el análisis pueda repetirse.</p>
+    <div class="prompt-block">
+      <pre>Escribe un script que procese los archivos de datos/ y genere las
+tablas y figuras del análisis descritas en plan.md. Guarda el
+código y las salidas en artefactos/. Reglas: no modifiques los
+datos crudos; registra fecha y versión de cada salida; si un dato
+falta o es dudoso, repórtalo en vez de imputarlo en silencio.</pre>
+      <button class="copy-btn" data-copy>⧉ Copiar</button>
+    </div>
+    <div class="arnes">🪢 <strong>Arnés:</strong> datos crudos intocables; toda figura nace de
+    datos reales con su código en el repositorio; los datos sensibles se anonimizan antes de
+    procesar.</div>
+    <div class="tip">💡 <strong>Tip:</strong> un análisis que no puede repetirse con un clic
+    no está terminado.</div>
+    <p class="artefacto">📄 <strong>Artefacto:</strong> <code>datos/</code> (crudos y procesados)
+    + <code>artefactos/</code> (scripts, tablas, figuras).</p>
+   </div>
+  </div>
+
+  <div class="modal-back hidden" id="m7" role="dialog" aria-modal="true" aria-labelledby="m7t">
+   <div class="modal"><button class="modal-close" aria-label="Cerrar">✕</button>
+    <p class="eyebrow modal-eye">Etapa 7 · Resultados y discusión</p>
+    <h4 id="m7t">Separar el hallazgo de su interpretación</h4>
+    <p><strong>El método:</strong> primero qué se encontró (resultados), después qué significa
+    (discusión), siempre en contraste con las hipótesis y con la literatura de la Matriz Q.</p>
+    <div class="prompt-block">
+      <pre>Contrasta los resultados de artefactos/ con H0 y H1 y con la
+matriz Q: qué se confirma, qué se contradice, qué queda abierto.
+Propón interpretaciones alternativas que yo no haya considerado
+y lista los límites que debo declarar. Marca todo como
+[BORRADOR-IA].</pre>
+      <button class="copy-btn" data-copy>⧉ Copiar</button>
+    </div>
+    <div class="arnes">🪢 <strong>Arnés:</strong> correlación no es causalidad; los límites se
+    declaran; la interpretación la firma el investigador.</div>
+    <div class="tip">💡 <strong>Tip:</strong> un resultado incómodo no se omite: se discute.</div>
+    <p class="artefacto">📄 <strong>Artefacto:</strong> borrador de resultados y discusión
+    <code>[BORRADOR-IA]</code> en <code>articulo/</code>.</p>
+   </div>
+  </div>
+
+  <div class="modal-back hidden" id="m8" role="dialog" aria-modal="true" aria-labelledby="m8t">
+   <div class="modal"><button class="modal-close" aria-label="Cerrar">✕</button>
+    <p class="eyebrow modal-eye">Etapa 8 · Comunicación</p>
+    <h4 id="m8t">Contar lo encontrado — y firmarlo</h4>
+    <p>Artículo académico, tesis o divulgación: el género cambia según la audiencia; las
+    reglas de autoría no. Todo cierre incluye la declaración de uso de IA (sección 05).</p>
+    <div class="prompt-block">
+      <pre>Con la Matriz Q validada, redacta un BORRADOR de artículo de prensa
+(800 palabras, tono divulgativo, titular atractivo pero honesto) que
+responda al video "La IA ROMPE a los TRABAJADORES que MEJOR la
+usan": qué dice realmente la evidencia. Reglas: cada afirmación
+empírica cierra con (Autor, año); distingue correlación de
+causalidad; incluye una sección "lo que todavía no sabemos"; nada
+de cifras que no estén en la matriz. Márcalo [BORRADOR-IA].
+Yo lo reescribo, lo firmo y añado la declaración de uso de IA.</pre>
+      <button class="copy-btn" data-copy>⧉ Copiar</button>
+    </div>
+    <div class="arnes">🪢 <strong>Arnés:</strong> el borrador se marca como borrador; el texto
+    final lo firma una persona que responde por él.</div>
+    <div class="tip">💡 <strong>Tip:</strong> la declaración de uso de IA no se escribe al
+    final: se va llenando durante el proyecto (el registro de prompts ya la contiene).</div>
+    <p class="artefacto">📄 <strong>Artefacto:</strong> <code>articulo/</code> —
+    <a href="articulo.html">el artículo terminado ↗</a> (sección 06).</p>
+   </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section id="agentes" class="section-tint">
+  <div class="sec-inner">
+  <p class="eyebrow"><span class="eye-num">04</span> Agentes y artefactos</p>
+  <h2>Tres agentes,<br>muchos artefactos</h2>
+  <p class="lead">En los agentes de código pueden definirse <strong>subagentes
+  especializados</strong>: archivos de texto que describen un rol, sus herramientas y sus
+  reglas. Los de este proyecto son tres: <strong>buscador</strong>,
+  <strong>sintetizador</strong> y <strong>visualizador</strong>. Así se define el buscador
+  en cada herramienta:</p>
+
+  <div class="ag-tabs" role="tablist" aria-label="Herramienta de agente">
+    <button class="ag-tab is-active" data-ag="ag-cc">Claude Code <span class="ag-star">★ usado en este ejercicio</span></button>
+    <button class="ag-tab" data-ag="ag-cx">OpenAI Codex</button>
+    <button class="ag-tab" data-ag="ag-gg">Google Antigravity</button>
+  </div>
+
+  <div class="subagente-config" id="ag-cc">
+    <div class="term-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+      <span class="term-title">.claude/agents/buscador.md — subagente de Claude Code</span></div>
+    <pre class="config-body">---
+name: buscador
+description: Busca literatura académica y registra conteos PRISMA
+tools: WebFetch, WebSearch, Read, Write
+---
+Eres el agente buscador del proyecto. Sigue las reglas de CLAUDE.md:
+solo fuentes con DOI verificable y URL de acceso explícita; guarda
+toda búsqueda en datos/ con fecha, ecuación exacta y conteos por
+etapa. Si no encuentras algo, dilo: nunca rellenes con resultados
+plausibles.</pre>
+    <p class="term-note">Las reglas generales viven en <code>CLAUDE.md</code>; cada subagente
+    de <code>.claude/agents/</code> añade su rol y sus herramientas permitidas.</p>
+  </div>
+
+  <div class="subagente-config hidden" id="ag-cx">
+    <div class="term-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+      <span class="term-title">AGENTS.md — instrucciones que Codex lee antes de actuar</span></div>
+    <pre class="config-body"># AGENTS.md (raíz del proyecto)
+
+## Rol: buscador
+Cuando la tarea sea buscar literatura académica:
+- Solo fuentes con DOI verificable y URL de acceso explícita.
+- Guarda toda búsqueda en datos/ con fecha, ecuación exacta y
+  conteos por etapa (PRISMA).
+- Si no encuentras algo, dilo: nunca rellenes con resultados
+  plausibles.</pre>
+    <p class="term-note"><code>AGENTS.md</code> es un estándar abierto (hoy de la Linux
+    Foundation): también lo leen Cursor, Copilot y otras herramientas. Puede haber uno por
+    carpeta; el más cercano al archivo editado tiene prioridad.</p>
+  </div>
+
+  <div class="subagente-config hidden" id="ag-gg">
+    <div class="term-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+      <span class="term-title">.agents/agents/buscador.md — agente del espacio de trabajo de Antigravity</span></div>
+    <pre class="config-body"># .agents/agents/buscador.md
+
+Nombre: buscador
+Misión: buscar literatura académica y registrar conteos PRISMA.
+Reglas (además de las del proyecto en GEMINI.md / .agents/rules/):
+- Solo fuentes con DOI verificable y URL de acceso explícita.
+- Toda búsqueda queda en datos/ con fecha, ecuación y conteos.
+- Ante la duda, reportar en vez de rellenar.</pre>
+    <p class="term-note">En Antigravity los agentes se lanzan y supervisan desde el
+    <strong>Gestor de Agentes</strong> (varios en paralelo); las reglas del proyecto viven en
+    <code>GEMINI.md</code> o <code>AGENTS.md</code> y en <code>.agents/rules/</code>.</p>
+  </div>
+
+  <p class="mini">La estructura es equivalente en las tres herramientas: un archivo de texto
+  con rol + reglas. Este proyecto se construyó con Claude Code; por eso es la pestaña
+  resaltada.</p>
+
+  <!-- ------------------ AGENTE BUSCADOR ------------------ -->
+  <h3 class="h3-line">🔍 Agente 1 · Buscador <span class="tag-live">datos reales de OpenAlex</span></h3>
+  <p>No es una simulación: el botón consulta directamente <strong>OpenAlex</strong>, un catálogo
+  abierto con más de 250 millones de trabajos académicos. Se elige una pregunta (hay una por
+  doctorado) y se ejecuta la búsqueda.</p>
+
+  <div class="oa-widget">
+    <label class="oa-label" for="oa-question">Pregunta de investigación</label>
+    <select id="oa-question">
+      <option value="caso" selected>El caso de este tutorial — ¿La IA afecta la carga cognitiva de sus usuarios intensivos?</option>
+      <option value="filosofia">Filosofía — ¿Puede una IA ser autora? Agencia y autoría</option>
+      <option value="educacion">Educación — IA generativa, aprendizaje e integridad académica</option>
+      <option value="derecho">Derecho — Responsabilidad legal y regulación de la IA</option>
+      <option value="psicologia">Psicología — Chatbots, salud mental y soledad</option>
+    </select>
+    <label class="oa-label" for="oa-equation">Ecuación de búsqueda (editable)</label>
+    <textarea id="oa-equation" rows="3" spellcheck="false"></textarea>
+    <div class="oa-actions">
+      <button class="btn-gold" id="oa-run">▶ Ejecutar búsqueda real en OpenAlex</button>
+      <span class="oa-status" id="oa-status"></span>
+    </div>
+    <div class="oa-out hidden" id="oa-out">
+      <div class="oa-count-row">
+        <div class="oa-count"><span id="oa-count">—</span><small>resultados identificados</small></div>
+        <div class="oa-funnel" id="oa-funnel" aria-hidden="true"></div>
+      </div>
+      <ol class="oa-results" id="oa-results"></ol>
+      <p class="mini" id="oa-note"></p>
+    </div>
+  </div>
+  <div class="tip">💡 Aquí reproducimos un posible paso del agente buscador: la misma búsqueda
+  que Claude Code ejecuta con el prompt de la <a href="#m4">etapa 4 · Literatura</a>.
+  La página muestra el mecanismo; el agente lo automatiza dentro del proyecto y deja el
+  registro en <code>datos/</code>.</div>
+
+  <!-- ------------------ AGENTE SINTETIZADOR ------------------ -->
+  <h3 class="h3-line">📚 Agente 2 · Sintetizador — la Matriz Q del caso <span class="mini">(clic en cada fila)</span></h3>
+  <p>Siete fuentes reales sobre la pregunta del caso, con DOI resuelto, URL de acceso y estado
+  de verificación. Cada fila indica qué responde el artículo a Q1 (esfuerzo), Q2 (memoria y
+  pensamiento crítico) y Q3 (vulnerables), y qué vacío deja.</p>
+
+  <div class="mq-wrap">
+    <table class="mq-table" id="mq-table">
+      <thead>
+        <tr><th>Fuente</th><th>Año</th><th>Aporte principal</th><th>Estado</th></tr>
+      </thead>
+      <tbody>
+        <tr class="mq-row" data-mq="d1"><td>Sparrow, Liu &amp; Wegner — <em>Science</em></td><td>2011</td><td>El "efecto Google": se recuerda dónde está la información, no la información</td><td><span class="st ok">verificada</span></td></tr>
+        <tr class="mq-detail hidden" id="d1"><td colspan="4">
+          <p><strong>Q1:</strong> cuando la información quedará disponible, se invierte menos esfuerzo en recordarla.
+          <strong>Q2:</strong> se recuerda mejor <em>dónde</em> encontrarla que su contenido.
+          <strong>Q3:</strong> no aborda perfiles de usuario.
+          <strong>Vacío:</strong> estudia buscadores, no IA generativa.</p>
+          <p class="mini">Sparrow, B., Liu, J., &amp; Wegner, D. M. (2011). Google effects on memory. <em>Science, 333</em>(6043), 776–778. URL: <a href="https://doi.org/10.1126/science.1207745" target="_blank" rel="noopener">doi.org/10.1126/science.1207745</a> · acceso cerrado → descarga institucional</p>
+        </td></tr>
+        <tr class="mq-row" data-mq="d2"><td>Risko &amp; Gilbert — <em>Trends in Cognitive Sciences</em></td><td>2016</td><td>El marco de la "descarga cognitiva": eficiente, pero con costos ocultos</td><td><span class="st fix">DOI corregido por el arnés</span></td></tr>
+        <tr class="mq-detail hidden" id="d2"><td colspan="4">
+          <p><strong>Q1:</strong> descargar es una estrategia racional con costos ocultos.
+          <strong>Q2:</strong> menor memoria interna cuando se confía en memoria externa.
+          <strong>Q3:</strong> la metacognición modula quién descarga más.
+          <strong>Vacío:</strong> anterior a los LLM.</p>
+          <p class="mini">Risko, E. F., &amp; Gilbert, S. J. (2016). Cognitive offloading. <em>TiCS, 20</em>(9), 676–688. URL: <a href="https://doi.org/10.1016/j.tics.2016.07.002" target="_blank" rel="noopener">doi.org/10.1016/j.tics.2016.07.002</a></p>
+          <p class="mini">⚠️ <strong>Historia de esta fila:</strong> el agente registró primero un DOI equivocado
+          (<code>…2016.06.007</code>, que pertenece a otro artículo). La regla del arnés — todo DOI se resuelve
+          antes de usarse — lo detectó el 29 de julio; quedó corregido y documentado en
+          <a href="investigacion/bibliografia/descargas.md" target="_blank" rel="noopener">descargas.md</a>.
+          El error fue del agente; la detección, del método.</p>
+        </td></tr>
+        <tr class="mq-row" data-mq="d3"><td>Ward et al. — <em>JACR</em></td><td>2017</td><td>"Brain drain": la sola presencia del celular reduce la capacidad disponible</td><td><span class="st ok">verificada</span></td></tr>
+        <tr class="mq-detail hidden" id="d3"><td colspan="4">
+          <p><strong>Q1:</strong> la sola presencia del dispositivo consume capacidad cognitiva.
+          <strong>Q3:</strong> mayor efecto en quienes más dependen del dispositivo.
+          <strong>Vacío:</strong> smartphones, no asistentes de IA.</p>
+          <p class="mini">Ward, A. F., Duke, K., Gneezy, A., &amp; Bos, M. W. (2017). Brain drain. <em>JACR, 2</em>(2), 140–154. URL: <a href="https://doi.org/10.1086/691462" target="_blank" rel="noopener">doi.org/10.1086/691462</a> · copia OA: <a href="https://doi.org/10.15781/t2j679d4s" target="_blank" rel="noopener">repositorio</a></p>
+        </td></tr>
+        <tr class="mq-row" data-mq="d4"><td>Gerlich — <em>Societies</em></td><td>2025</td><td>Más uso de IA ↔ menos pensamiento crítico, mediado por descarga cognitiva (n=666)</td><td><span class="st ok">verificada · OA</span></td></tr>
+        <tr class="mq-detail hidden" id="d4"><td colspan="4">
+          <p><strong>Q1:</strong> la descarga cognitiva media la relación uso de IA → pensamiento crítico.
+          <strong>Q2:</strong> correlación negativa con desempeño en pensamiento crítico.
+          <strong>Q3:</strong> más fuerte en usuarios jóvenes y frecuentes.
+          <strong>Vacío:</strong> correlacional, autorreporte: no demuestra causalidad.</p>
+          <p class="mini">Gerlich, M. (2025). AI tools in society. <em>Societies, 15</em>(1), 6. URL: <a href="https://doi.org/10.3390/soc15010006" target="_blank" rel="noopener">doi.org/10.3390/soc15010006</a> · PDF OA: <a href="https://www.mdpi.com/2075-4698/15/1/6/pdf" target="_blank" rel="noopener">mdpi.com</a> (el editor bloquea la descarga automatizada → un clic manual)</p>
+        </td></tr>
+        <tr class="mq-row" data-mq="d5"><td>Lee et al. — Microsoft Research / CMU, <em>CHI</em></td><td>2025</td><td>A mayor confianza en la IA, menor pensamiento crítico autorreportado (319 trabajadores)</td><td><span class="st ok">verificada · OA</span></td></tr>
+        <tr class="mq-detail hidden" id="d5"><td colspan="4">
+          <p><strong>Q1:</strong> el esfuerzo se desplaza de hacer la tarea a verificar y supervisar a la IA.
+          <strong>Q2:</strong> a mayor confianza en la herramienta, menor ejercicio crítico autorreportado (936 tareas reales).
+          <strong>Q3:</strong> justamente los usuarios que más confían: los "mejores usuarios".
+          <strong>Vacío:</strong> autorreporte; contexto laboral.</p>
+          <p class="mini">Lee, H.-P., et al. (2025). The impact of generative AI on critical thinking. <em>CHI '25</em>. URL: <a href="https://doi.org/10.1145/3706598.3713778" target="_blank" rel="noopener">doi.org/10.1145/3706598.3713778</a> · PDF: <a href="https://dl.acm.org/doi/pdf/10.1145/3706598.3713778" target="_blank" rel="noopener">ACM DL</a></p>
+          <p class="mini">🔁 <strong>Verificación repetible:</strong> este DOI se resolvió con el agente
+          el 29 de julio; cualquiera puede repetir la comprobación en doi.org. Esa repetibilidad
+          es, precisamente, el arnés.</p>
+        </td></tr>
+        <tr class="mq-row" data-mq="d6"><td>Kosmyna et al. — MIT Media Lab (preprint)</td><td>2025</td><td>"Deuda cognitiva": menor conectividad neuronal (EEG) y menor recuerdo al escribir con LLM</td><td><span class="st ok">preprint · PDF ↓</span></td></tr>
+        <tr class="mq-detail hidden" id="d6"><td colspan="4">
+          <p><strong>Q1:</strong> menor conectividad neuronal al escribir con LLM que sin él o con buscador (n=54).
+          <strong>Q2:</strong> menor recuerdo y apropiación del propio texto; al volver a escribir sin LLM, ese grupo rinde peor.
+          <strong>Q3:</strong> uso sostenido del LLM como sustituto.
+          <strong>Vacío:</strong> preprint, n pequeño, tarea específica de ensayo.</p>
+          <p class="mini">Kosmyna, N., et al. (2025). Your brain on ChatGPT. URL: <a href="https://arxiv.org/abs/2506.08872" target="_blank" rel="noopener">arxiv.org/abs/2506.08872</a> · PDF descargado en <code>bibliografia/pdf/</code> (37 MB)</p>
+        </td></tr>
+        <tr class="mq-row" data-mq="d7"><td>Dell'Acqua et al. — Harvard Business School</td><td>2023</td><td>"Dormidos al volante": la pericia no protege de la sobreconfianza fuera de la frontera de la IA</td><td><span class="st ok">verificada</span></td></tr>
+        <tr class="mq-detail hidden" id="d7"><td colspan="4">
+          <p><strong>Q1:</strong> dentro de la "frontera" de la IA, mejora el desempeño con menos esfuerzo.
+          <strong>Q2:</strong> fuera de la frontera, quienes confían ciegamente empeoran resultados.
+          <strong>Q3:</strong> consultores expertos (n=758): los "mejores usuarios" también caen.
+          <strong>Vacío:</strong> tareas de consultoría; la frontera cambia con cada modelo.</p>
+          <p class="mini">Dell'Acqua, F., et al. (2023). Navigating the jagged technological frontier. URL: <a href="https://doi.org/10.2139/ssrn.4573321" target="_blank" rel="noopener">doi.org/10.2139/ssrn.4573321</a> · versión publicada (2026): <a href="https://doi.org/10.1287/orsc.2025.21838" target="_blank" rel="noopener">Organization Science</a></p>
+        </td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="mini">Fuente: <a href="investigacion/bibliografia/matriz_q.csv" target="_blank" rel="noopener">matriz_q.csv</a> ·
+  URLs y descargas en <a href="investigacion/bibliografia/descargas.md" target="_blank" rel="noopener">descargas.md</a> ·
+  metadatos completos en <code>bibliografia/metadatos/</code> · PDF OA en <code>bibliografia/pdf/</code></p>
+
+  <div class="arnes arnes-story">🪢 <strong>El arnés en funcionamiento (caso real de esta página):</strong>
+  al verificar los DOI de la matriz, el propio agente detectó que había registrado uno equivocado
+  — la fila de Risko &amp; Gilbert. La regla lo atrapó; quedó corregido y documentado.
+  <em>La verificación no es desconfianza: es método.</em></div>
+
+  <div class="prisma-def">
+    <div class="prisma-def-txt">
+      <h4>Método PRISMA <span class="mini">(Page et al., 2021)</span></h4>
+      <p><em>Preferred Reporting Items for Systematic Reviews and Meta-Analyses</em>: la guía
+      internacional para revisiones con <strong>rigor, transparencia y reproducibilidad</strong>.</p>
+      <ul class="checks">
+        <li>Asegura un proceso <strong>estructurado</strong>, evitando sesgos</li>
+        <li>Mejora la <strong>calidad</strong> del análisis</li>
+        <li>Permite que otros investigadores <strong>repliquen</strong> el proceso</li>
+        <li>Se documenta con un <strong>diagrama de flujo</strong> estandarizado</li>
+      </ul>
+      <p class="mini">🔗 Herramienta en línea: <a href="https://estech.shinyapps.io/prisma_flowdiagram/" target="_blank" rel="noopener">estech.shinyapps.io/prisma_flowdiagram</a> — o el generador de abajo.</p>
+    </div>
+  </div>
+
+  <!-- ------------------ AGENTE VISUALIZADOR ------------------ -->
+  <h3 class="h3-line">🎨 Agente 3 · Visualizador — imágenes que ayudan a pensar</h3>
+  <p class="lead">A un agente pueden pedírsele <strong>artefactos visuales de alta calidad</strong>
+  — SVG, HTML, JS — que conviertan un problema abstracto en algo visible. Tres ejemplos en
+  funcionamiento, cada uno con su prompt.</p>
+
+  <div class="viz-grid">
+    <article class="viz-card">
+      <h4>Diagrama conceptual (SVG)</h4>
+      <div class="viz-holder">
+        <svg viewBox="0 0 460 300" role="img" aria-label="Ciclo de la descarga cognitiva" class="ciclo-svg">
+          <defs>
+            <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" fill="#C6A44E"/>
+            </marker>
+          </defs>
+          <rect x="150" y="14" width="160" height="46" rx="10" fill="#003366"/>
+          <text x="230" y="34" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">Delegar la tarea</text>
+          <text x="230" y="50" text-anchor="middle" fill="#bcd2e8" font-size="10">en el asistente de IA</text>
+          <rect x="300" y="120" width="150" height="52" rx="10" fill="#eef4fa" stroke="#003366"/>
+          <text x="375" y="141" text-anchor="middle" fill="#003366" font-size="12" font-weight="700">Menor esfuerzo</text>
+          <text x="375" y="156" text-anchor="middle" fill="#4b6b8c" font-size="10">Sparrow 2011 · Lee 2025</text>
+          <rect x="150" y="230" width="160" height="52" rx="10" fill="#eef4fa" stroke="#003366"/>
+          <text x="230" y="251" text-anchor="middle" fill="#003366" font-size="12" font-weight="700">Menor retención</text>
+          <text x="230" y="266" text-anchor="middle" fill="#4b6b8c" font-size="10">Kosmyna 2025 · Risko 2016</text>
+          <rect x="10" y="120" width="150" height="52" rx="10" fill="#eef4fa" stroke="#003366"/>
+          <text x="85" y="141" text-anchor="middle" fill="#003366" font-size="12" font-weight="700">Mayor dependencia</text>
+          <text x="85" y="156" text-anchor="middle" fill="#4b6b8c" font-size="10">Gerlich 2025 · Ward 2017</text>
+          <path d="M 312 62 Q 375 80 375 118" fill="none" stroke="#C6A44E" stroke-width="2.5" marker-end="url(#arr)"/>
+          <path d="M 372 174 Q 355 225 312 248" fill="none" stroke="#C6A44E" stroke-width="2.5" marker-end="url(#arr)"/>
+          <path d="M 148 250 Q 95 225 86 174" fill="none" stroke="#C6A44E" stroke-width="2.5" marker-end="url(#arr)"/>
+          <path d="M 88 118 Q 105 80 148 60" fill="none" stroke="#C6A44E" stroke-width="2.5" marker-end="url(#arr)"/>
+          <text x="230" y="152" text-anchor="middle" fill="#7d93ab" font-size="10" font-style="italic">diagrama conceptual · generado con IA</text>
+        </svg>
+      </div>
+      <details class="viz-prompt">
+        <summary>Ver el prompt que lo genera</summary>
+        <pre>Crea un diagrama SVG de alta calidad visual (editable, paleta
+sobria de 3 colores, tipografía legible, apto para proyectar) que
+explique el ciclo de la descarga cognitiva: delegar → menor
+esfuerzo → menor retención → mayor dependencia → delegar más.
+Junto a cada eslabón indica la referencia de la Matriz Q que lo
+sustenta. Es un diagrama CONCEPTUAL: decláralo en el pie.
+Guárdalo en artefactos/ con este prompt como comentario interno.</pre>
+      </details>
+    </article>
+
+    <article class="viz-card">
+      <h4>Tacómetro de rúbrica (JS interactivo)</h4>
+      <div class="viz-holder gauge-holder">
+        <svg viewBox="0 0 220 130" class="gauge-svg" role="img" aria-label="Tacómetro de rúbrica">
+          <path d="M 20 115 A 90 90 0 0 1 110 25" fill="none" stroke="#d64545" stroke-width="16"/>
+          <path d="M 110 25 A 90 90 0 0 1 173.6 51.4" fill="none" stroke="#e8862e" stroke-width="16"/>
+          <path d="M 173.6 51.4 A 90 90 0 0 1 195.6 87.2" fill="none" stroke="#e6b30f" stroke-width="16"/>
+          <path d="M 195.6 87.2 A 90 90 0 0 1 200 115" fill="none" stroke="#2e8b57" stroke-width="16"/>
+          <line id="gauge-needle" x1="110" y1="115" x2="30" y2="115" stroke="#003366" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="110" cy="115" r="7" fill="#003366"/>
+        </svg>
+        <input type="range" id="gauge-range" min="0" max="100" value="35" aria-label="Puntaje de la rúbrica">
+        <p class="gauge-label" id="gauge-label">35 / 100 — Nivel <strong>Inicial</strong></p>
+      </div>
+      <details class="viz-prompt">
+        <summary>Ver el prompt que lo genera</summary>
+        <pre>Crea un widget HTML+JS autocontenido: un tacómetro semicircular
+con los 4 niveles de la rúbrica institucional (Inicial &lt;50,
+Básico 50–75, Autónomo 75–90, Estratégico ≥90) y una aguja que
+responda a un control deslizante. Paleta: rojo, naranja, ámbar,
+verde; sin librerías externas. Lo usaré para comunicar el estado
+de cada equipo en segundos durante la retroalimentación.</pre>
+      </details>
+    </article>
+
+    <article class="viz-card">
+      <h4>Diagrama PRISMA (generador)</h4>
+      <div class="viz-holder">
+        <div class="pr-inputs">
+          <label>Identificados <input type="number" id="pr-id" value="47844" min="0"></label>
+          <label>Cribados <input type="number" id="pr-scr" value="1011" min="0"></label>
+          <label>Elegibles <input type="number" id="pr-eleg" value="38" min="0"></label>
+          <label>Incluidos <input type="number" id="pr-inc" value="7" min="0"></label>
+        </div>
+        <div id="prisma-out" aria-live="polite"></div>
+      </div>
+      <details class="viz-prompt">
+        <summary>Ver el prompt que lo genera</summary>
+        <pre>Con los conteos registrados en datos/registro_busquedas.md,
+genera el diagrama de flujo PRISMA en SVG: identificación →
+cribado → elegibilidad → incluidos, mostrando a la derecha
+cuántos se excluyen en cada etapa y por qué razón. Estilo sobrio,
+apto para un documento académico. Guárdalo en artefactos/.</pre>
+      </details>
+    </article>
+  </div>
+
+  <div class="tip">💡 <strong>Principios del visualizador:</strong> (1) pedir SVG o HTML
+  <em>editable</em>, no imagen plana; (2) paleta y tipografía definidas; (3) el prompt guardado
+  dentro del archivo; (4) declarar si el diagrama es conceptual. Los gráficos <em>de datos</em>
+  solo nacen de datos reales del proyecto (sección 05).</div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section id="autoria" class="section-dark">
+  <div class="sec-inner">
+  <p class="eyebrow gold"><span class="eye-num">05</span> La autoría del investigador</p>
+  <h2>Cuatro modos de escribir con IA<br>sin dejar de ser el autor</h2>
+
+  <div class="cards-4">
+    <article class="card-dark">
+      <div class="cd-num">4.1</div>
+      <h3>Escritura directa,<br>IA como validadora</h3>
+      <p>El investigador escribe; la IA revisa: lógica, estilo, contraejemplos, claridad.
+      Es el modo que más protege la voz propia.</p>
+      <p class="ojo">⚠️ <strong>Datos sensibles:</strong> no pegar en ningún servicio datos
+      personales, entrevistas sin anonimizar ni material inédito de terceros. Anonimizar
+      primero; revisar la política institucional.</p>
+    </article>
+    <article class="card-dark">
+      <div class="cd-num">4.2</div>
+      <h3>El diálogo como<br>ejercicio autoral</h3>
+      <p>La IA puede dialogar para <em>definir, refinar o corregir</em> el problema:
+      "haz preguntas", "critica este argumento", "da el contraargumento más fuerte".</p>
+      <p>Pensar <em>con</em> la IA es legítimo — siempre que quien decide, y quien queda
+      registrado decidiendo, sea el investigador.</p>
+    </article>
+    <article class="card-dark">
+      <div class="cd-num">4.3</div>
+      <h3>Los artefactos<br>adecuados</h3>
+      <p><strong>Pedirle:</strong> estructuras y planes, matrices de literatura, diagramas
+      conceptuales, código de análisis, resúmenes de textos <em>ya leídos</em>.</p>
+      <p><strong>No pedirle:</strong> texto final para firmar sin revisar, referencias "de
+      memoria", datos o resultados, ni la pregunta de investigación.</p>
+    </article>
+    <article class="card-dark">
+      <div class="cd-num">4.4</div>
+      <h3>Principios de<br>las imágenes</h3>
+      <p><strong>Sí:</strong> diagramas conceptuales e ilustraciones, declarados como generados.</p>
+      <p><strong>Solo con datos reales:</strong> todo gráfico de resultados, con su código
+      reproducible en el repositorio.</p>
+      <p><strong>Nunca:</strong> crear o alterar imágenes de apariencia científica.</p>
+    </article>
+  </div>
+
+  <h3 class="h3-line light">Lo que ya dicen las editoriales</h3>
+  <div class="edit-strip">
+    <div><b>COPE</b><span>La IA no cumple los requisitos de autoría; los autores responden y declaran su uso.</span></div>
+    <div><b>Elsevier</b><span>IA para legibilidad con supervisión y declaración; prohibida como autora o para crear/alterar imágenes.</span></div>
+    <div><b>Springer</b><span>Los LLM no pueden ser autores; el uso se documenta en métodos.</span></div>
+    <div><b>Wiley</b><span>Transparencia: qué herramienta y para qué; el humano responde por exactitud e integridad.</span></div>
+    <div><b>IEEE</b><span>El uso de IA en el texto se declara; la responsabilidad es de los autores.</span></div>
+  </div>
+
+  <div class="split">
+    <blockquote class="decl">
+      <p class="decl-title">Ejemplo de declaración</p>
+      «Durante la preparación de este trabajo se utilizó Claude Code (Anthropic) para la
+      búsqueda y organización preliminar de la literatura y la construcción de la matriz de
+      síntesis, bajo las reglas del archivo CLAUDE.md del proyecto. El autor verificó cada
+      referencia en su fuente original, reescribió el texto y asume plena responsabilidad
+      por su contenido.»
+    </blockquote>
+    <div class="triada">
+      <div><b>Comprender</b><span>No incluir nada que no pueda explicarse y defenderse ante un par evaluador.</span></div>
+      <div><b>Revisar</b><span>Editar y validar todo texto o análisis generado antes de incorporarlo.</span></div>
+      <div><b>Asumir</b><span>El investigador responde por cada palabra, dato y cita — las haya escrito él o una máquina.</span></div>
+    </div>
+  </div>
+  <p class="clave">Regla simple: <em>ante la duda entre declarar o no declarar, declarar.</em>
+  La transparencia nunca perjudica; la omisión sí.</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section id="resultados">
+  <p class="eyebrow"><span class="eye-num">06</span> Resultados</p>
+  <h2>Un artículo — y un proyecto<br>que lo respalda</h2>
+
+  <div class="split">
+    <a class="art-card" href="articulo.html">
+      <p class="art-kicker">El producto final del ejercicio</p>
+      <p class="art-title">¿"Rompe" la IA a quienes mejor la usan?<br>
+      <span>Lo que dice la evidencia (y lo que todavía no)</span></p>
+      <p class="art-cta">Leer el artículo →</p>
+    </a>
+    <div>
+      <h3 class="h3-line">Todo queda en el proyecto</h3>
+      <pre class="tree">carga-cognitiva-ia/
+├── CLAUDE.md            ← el arnés: las reglas del proyecto
+├── plan.md              ← etapas + criterios de verificación
+├── prompts/             ← registro de prompts (memoria metodológica)
+├── datos/               ← búsquedas con fecha y conteos (→ PRISMA)
+├── bibliografia/
+│   ├── matriz_q.csv     ← síntesis por preguntas, con URL por fuente
+│   ├── metadatos/       ← JSON de OpenAlex por artículo
+│   ├── pdf/             ← PDFs de acceso abierto descargados
+│   └── descargas.md     ← URLs explícitas + qué se descargó y qué no
+├── artefactos/          ← SVG, HTML, JS (cada uno con su prompt)
+└── articulo/            ← borradores [BORRADOR-IA] y versión firmada</pre>
+      <p>Son buenas prácticas de programación aplicadas a la investigación: versionar,
+      registrar, separar datos de interpretación, dejar rastro auditable. El proyecto entero
+      <em>es</em> el método.</p>
+    </div>
+  </div>
+
+  <div class="tip">💡 <strong>La prueba de fuego:</strong> cualquier lector puede reconstruir
+  esta investigación — qué se buscó (ecuaciones), qué se encontró (datos), qué se seleccionó y
+  por qué (matriz + PRISMA), de dónde se descargó cada fuente (descargas.md), qué prompts se
+  usaron (registro) y quién firmó qué (declaración). Esa es la transparencia metodológica que
+  se exige sin IA — ahora con mejor evidencia.</div>
+</section>
+
+<!-- ============================================================ -->
+<section id="hazlo" class="section-tint">
+  <div class="sec-inner">
+  <p class="eyebrow"><span class="eye-num">✦</span> Para replicar</p>
+  <h2>Cómo replicar este ejercicio</h2>
+  <div class="split">
+    <ol class="steps-line big">
+      <li>Instalar <strong>VS Code</strong> y <strong>Claude Code</strong> (15 min).</li>
+      <li>Crear la carpeta del proyecto y pedir al agente la estructura con buenas prácticas.</li>
+      <li>Escribir el <strong>CLAUDE.md</strong> propio: las reglas innegociables (el de este proyecto sirve de plantilla).</li>
+      <li>Recorrer el flujo de la <a href="#plan">sección 03</a> con los prompts sugeridos, sobre el tema propio.</li>
+      <li>Cerrar con la <strong>declaración de uso de IA</strong> — y firmar.</li>
+    </ol>
+    <div>
+      <h3 class="h3-line">Recursos</h3>
+      <ul class="rec-list">
+        <li><a href="presentacion.html">La presentación de la charla</a> — diapositivas navegables en el navegador</li>
+        <li><a href="https://github.com/izainea/agentes-ia-investigacion" target="_blank" rel="noopener">Este proyecto en GitHub</a> — clonable como plantilla</li>
+        <li><a href="https://code.visualstudio.com" target="_blank" rel="noopener">VS Code</a> · <a href="https://claude.com/claude-code" target="_blank" rel="noopener">Claude Code</a> (el usado aquí)</li>
+        <li><a href="https://openai.com/codex" target="_blank" rel="noopener">OpenAI Codex</a> · <a href="https://antigravity.google" target="_blank" rel="noopener">Google Antigravity</a> — agentes alternativos, mismo método</li>
+        <li><a href="https://openalex.org" target="_blank" rel="noopener">OpenAlex</a> · <a href="https://doi.org" target="_blank" rel="noopener">doi.org</a> — verificación de referencias</li>
+        <li><a href="https://elicit.com" target="_blank" rel="noopener">Elicit</a> · <a href="https://consensus.app" target="_blank" rel="noopener">Consensus</a> · <a href="https://www.researchrabbit.ai" target="_blank" rel="noopener">ResearchRabbit</a> — búsqueda sin programar</li>
+        <li><a href="https://estech.shinyapps.io/prisma_flowdiagram/" target="_blank" rel="noopener">Generador de diagramas PRISMA</a></li>
+        <li><a href="https://www.youtube.com/watch?v=fTj4RkCVBXw" target="_blank" rel="noopener">El video que motivó el caso</a> (X. Mitjana)</li>
+      </ul>
+    </div>
+  </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p><strong>El uso de agentes de IA en la investigación</strong> · Carlos Isaac Zainea Maya — Doctorado en Filosofía ·
+  Workshop "Integración de la IA en la investigación" · Universidad Santo Tomás · julio de 2026</p>
+  <p class="mini">Contacto: <a href="mailto:cizaineam@gmail.com">cizaineam@gmail.com</a> ·
+  GitHub: <a href="https://github.com/izainea" target="_blank" rel="noopener">izainea</a></p>
+  <p class="mini">Declaración de uso de IA: esta página y el proyecto de ejemplo fueron construidos con
+  Claude Code (Anthropic) bajo la dirección del autor, quien definió el contenido, verificó las
+  referencias citadas y asume plena responsabilidad por el resultado.
+  <em>IA con criterio, no en lugar de criterio.</em></p>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

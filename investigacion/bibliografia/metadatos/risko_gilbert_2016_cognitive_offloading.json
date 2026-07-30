@@ -1,0 +1,145 @@
+﻿{
+    "display_name":  "Cognitive Offloading",
+    "publication_year":  2016,
+    "doi":  "https://doi.org/10.1016/j.tics.2016.07.002",
+    "type":  "article",
+    "open_access":  {
+                        "is_oa":  false,
+                        "oa_status":  "closed",
+                        "oa_url":  null,
+                        "any_repository_has_fulltext":  false
+                    },
+    "best_oa_location":  null,
+    "primary_location":  {
+                             "id":  "doi:10.1016/j.tics.2016.07.002",
+                             "is_oa":  false,
+                             "landing_page_url":  "https://doi.org/10.1016/j.tics.2016.07.002",
+                             "pdf_url":  null,
+                             "source":  {
+                                            "id":  "https://openalex.org/S192051125",
+                                            "display_name":  "Trends in Cognitive Sciences",
+                                            "issn_l":  "1364-6613",
+                                            "issn":  [
+                                                         "1364-6613",
+                                                         "1879-307X"
+                                                     ],
+                                            "is_oa":  false,
+                                            "is_in_doaj":  false,
+                                            "is_core":  true,
+                                            "host_organization":  "https://openalex.org/P4310320990",
+                                            "host_organization_name":  "Elsevier BV",
+                                            "host_organization_lineage":  [
+                                                                              "https://openalex.org/P4310320990"
+                                                                          ],
+                                            "host_organization_lineage_names":  [
+                                                                                    "Elsevier BV"
+                                                                                ],
+                                            "type":  "journal"
+                                        },
+                             "license":  null,
+                             "license_id":  null,
+                             "version":  "publishedVersion",
+                             "is_accepted":  true,
+                             "is_published":  true,
+                             "raw_source_name":  "Trends in Cognitive Sciences",
+                             "raw_type":  "journal-article"
+                         },
+    "cited_by_count":  1028,
+    "authorships":  [
+                        {
+                            "author_position":  "first",
+                            "author":  {
+                                           "id":  "https://openalex.org/A5005474666",
+                                           "display_name":  "Evan F. Risko",
+                                           "orcid":  "https://orcid.org/0000-0001-5702-0350"
+                                       },
+                            "institutions":  [
+                                                 {
+                                                     "id":  "https://openalex.org/I151746483",
+                                                     "display_name":  "University of Waterloo",
+                                                     "ror":  "https://ror.org/01aff2v68",
+                                                     "country_code":  "CA",
+                                                     "type":  "education",
+                                                     "lineage":  [
+                                                                     "https://openalex.org/I151746483"
+                                                                 ]
+                                                 }
+                                             ],
+                            "countries":  [
+                                              "CA"
+                                          ],
+                            "is_corresponding":  true,
+                            "raw_author_name":  "Evan F. Risko",
+                            "raw_affiliation_strings":  [
+                                                            "Department of Psychology, University of Waterloo, Waterloo, Canada. Electronic address: efrisko@uwaterloo.ca",
+                                                            "Department of Psychology, University of Waterloo, Waterloo, Canada"
+                                                        ],
+                            "raw_orcid":  null,
+                            "affiliations":  [
+                                                 {
+                                                     "raw_affiliation_string":  "Department of Psychology, University of Waterloo, Waterloo, Canada. Electronic address: efrisko@uwaterloo.ca",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I151746483"
+                                                                         ]
+                                                 },
+                                                 {
+                                                     "raw_affiliation_string":  "Department of Psychology, University of Waterloo, Waterloo, Canada",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I151746483"
+                                                                         ]
+                                                 }
+                                             ]
+                        },
+                        {
+                            "author_position":  "last",
+                            "author":  {
+                                           "id":  "https://openalex.org/A5016429353",
+                                           "display_name":  "Sam J. Gilbert",
+                                           "orcid":  "https://orcid.org/0000-0002-3839-7045"
+                                       },
+                            "institutions":  [
+                                                 {
+                                                     "id":  "https://openalex.org/I45129253",
+                                                     "display_name":  "University College London",
+                                                     "ror":  "https://ror.org/02jx3x895",
+                                                     "country_code":  "GB",
+                                                     "type":  "education",
+                                                     "lineage":  [
+                                                                     "https://openalex.org/I124357947",
+                                                                     "https://openalex.org/I45129253"
+                                                                 ]
+                                                 }
+                                             ],
+                            "countries":  [
+                                              "GB"
+                                          ],
+                            "is_corresponding":  true,
+                            "raw_author_name":  "Sam J. Gilbert",
+                            "raw_affiliation_strings":  [
+                                                            "Institute of Cognitive Neuroscience, University College London, London, UK. Electronic address: sam.gilbert@ucl.ac.uk",
+                                                            "Institute of Cognitive Neuroscience, University College London, London, UK"
+                                                        ],
+                            "raw_orcid":  null,
+                            "affiliations":  [
+                                                 {
+                                                     "raw_affiliation_string":  "Institute of Cognitive Neuroscience, University College London, London, UK. Electronic address: sam.gilbert@ucl.ac.uk",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I45129253"
+                                                                         ]
+                                                 },
+                                                 {
+                                                     "raw_affiliation_string":  "Institute of Cognitive Neuroscience, University College London, London, UK",
+                                                     "institution_ids":  [
+                                                                             "https://openalex.org/I45129253"
+                                                                         ]
+                                                 }
+                                             ]
+                        }
+                    ],
+    "biblio":  {
+                   "volume":  "20",
+                   "issue":  "9",
+                   "first_page":  "676",
+                   "last_page":  "688"
+               }
+}
