@@ -280,28 +280,37 @@ b,strong{color:inherit}
 <section class="slide center">
   <p class="eye">Las opciones sobre la mesa</p>
   <h2>¿Por qué VS Code + Claude Code?</h2>
-  <div class="fila">
-    <div class="caja" style="max-width:26vw;min-width:16rem;text-align:left">
-      <p class="tag" style="color:var(--rojo)">Chatbots con "proyectos"</p>
-      <p style="margin:.4vh 0;font-weight:700;font-size:clamp(.8rem,1.3vw,1.05rem)">ChatGPT Projects · Claude.ai · NotebookLM</p>
-      <p class="mini" style="color:var(--texto)">Guardan documentos y conversaciones en la nube,
-      pero no trabajan sobre los archivos del proyecto ni dejan rastro reproducible.</p>
+  <div class="fila" style="align-items:stretch">
+    <div class="caja" style="max-width:26vw;min-width:15rem;text-align:left">
+      <p class="tag" style="color:var(--muted)">1 · Chatbot</p>
+      <p style="margin:.4vh 0;font-weight:700;font-size:clamp(.8rem,1.35vw,1.1rem)">Conversa</p>
+      <p class="mini" style="color:var(--texto)">Texto entra, texto sale. Responde bien, pero
+      no toca nada: ni archivos, ni búsquedas, ni registro.</p>
+      <p class="mini" style="color:var(--muted);margin-top:1vh">ChatGPT · Claude · Gemini (uso básico)</p>
     </div>
-    <div class="caja" style="max-width:26vw;min-width:16rem;text-align:left">
-      <p class="tag" style="color:var(--azul)">Agentes de código</p>
-      <p style="margin:.4vh 0;font-weight:700;font-size:clamp(.8rem,1.3vw,1.05rem)">Claude Code · Codex · Antigravity · Copilot</p>
-      <p class="mini" style="color:var(--texto)">Leen y escriben el proyecto, ejecutan búsquedas
-      y scripts, verifican — bajo reglas persistentes. Aquí viven las buenas prácticas.</p>
+    <div class="caja" style="max-width:26vw;min-width:15rem;text-align:left">
+      <p class="tag" style="color:var(--rojo)">2 · Chatbot con "proyectos"</p>
+      <p style="margin:.4vh 0;font-weight:700;font-size:clamp(.8rem,1.35vw,1.1rem)">Conversa sobre documentos</p>
+      <p class="mini" style="color:var(--texto)">Guarda archivos en la nube y responde sobre
+      ellos. Útil — pero no trabaja sobre el proyecto ni deja rastro reproducible.</p>
+      <p class="mini" style="color:var(--muted);margin-top:1vh">ChatGPT Projects · Claude.ai · NotebookLM</p>
     </div>
-    <div class="caja" style="max-width:26vw;min-width:16rem;text-align:left;background:linear-gradient(160deg,#fdf9ec,#f6ecd2);border:2px solid var(--dorado-2)">
-      <p class="tag" style="color:#6d5716">La elección de este ejercicio</p>
-      <p style="margin:.4vh 0;font-weight:800;font-size:clamp(.85rem,1.4vw,1.15rem)">VS Code + Claude Code</p>
-      <p class="mini" style="color:var(--texto)">En nuestra prueba, el más amplio y manejable:
-      subagentes, arnés (CLAUDE.md), editor y terminal. Codex y Antigravity son equivalentes válidos.</p>
+    <div class="caja" style="max-width:26vw;min-width:15rem;text-align:left;border:2px solid var(--azul)">
+      <p class="tag" style="color:var(--azul)">3 · Agente de código</p>
+      <p style="margin:.4vh 0;font-weight:700;font-size:clamp(.8rem,1.35vw,1.1rem)">Trabaja sobre el proyecto</p>
+      <p class="mini" style="color:var(--texto)">Lee y escribe los archivos, ejecuta búsquedas
+      y scripts, verifica — bajo reglas persistentes. Aquí viven las buenas prácticas.</p>
+      <p class="mini" style="color:var(--muted);margin-top:1vh">Claude Code · Codex · Antigravity · Copilot</p>
     </div>
   </div>
-  <p class="nota"><strong>VS Code</strong>: gratuito, y es donde vive la carpeta del proyecto ·
-  <strong>Claude Code</strong>: con él se construyó todo este material — página, diapositivas y artículo.</p>
+  <div class="caja" style="margin-top:2.2vh;max-width:62vw;min-width:20rem;background:linear-gradient(160deg,#fdf9ec,#f6ecd2);border:2px solid var(--dorado-2);text-align:left">
+    <p class="tag" style="color:#6d5716">El de este ejercicio — dentro de la categoría 3</p>
+    <p style="margin:.4vh 0;font-weight:800;font-size:clamp(.9rem,1.5vw,1.2rem)">VS Code + Claude Code</p>
+    <p class="mini" style="color:var(--texto)">VS Code: el editor gratuito donde vive la carpeta.
+    Claude Code: en nuestra prueba, el agente más amplio y manejable — subagentes, arnés
+    (CLAUDE.md), editor y terminal. Codex y Antigravity son equivalentes válidos.
+    Con esta dupla se construyó todo este material.</p>
+  </div>
 </section>
 
 <!-- 5 · EL ENTORNO -->
